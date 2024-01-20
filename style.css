@@ -1,9 +1,31 @@
-.light-theme {
+:root { /** :root selector presents <html> element**/
+    --green: #00ff00; /** to create new variables in CSS**/
+    --white: #fff;
+    --black: #000;
+}
+
+/**.light-theme {
     color: #000;
     background: #0f0;
+}**/
+
+.light-theme {
+    --bg: var(--green); /** created variable 'bg' for specific color**/
+    --fontColor: var(--black); /** created variable 'fontColor' for specific color**/
 }
+
+.dark-theme {
+    --bg:var(--black);
+    --fontColor:var(--green)
+}
+/** 
 body{
     font-family: monospace;
+} **/
+body {
+    background: var(--bg);
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
 }
 ul {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,9 +34,13 @@ ul {
 li{
     list-style: circle;
 }
-.list { /** . list is a class selector, applies to class attribute**/
+/**
+.list { /** . list is a class selector, applies to class attribute**//**
     list-style: square;
 }
-#msq { /** #msg is an ID selector, applies to id attribute**/
+**/
+/**
+#msq {  /** #msg is an ID selector, applies to id attribute **/ /**
     font-family: monospace;
 }
+**/
