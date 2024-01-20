@@ -19,8 +19,8 @@
 .dark-theme {
     --bg:var(--black);
     --fontColor:var(--green)
-    --btnFontColor : var(var(--black));
-    --btnBg : var(--white);
+    --btnFontColor : var(var(--black)); /**New variable to specify button-specific font color **/
+    --btnBg : var(--white); /**New variable to specify button-specific background color **/
 }
 /** 
 body{
@@ -47,9 +47,9 @@ body {
 ul {
     font-family: Arial, Helvetica, sans-serif;
     font-size: xx-large;
-}
+}**/
 li{
-    list-style: circle;
+    list-style: square;
 }
 /**
 .list { /** . list is a class selector, applies to class attribute**//**
