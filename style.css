@@ -12,11 +12,15 @@
 .light-theme {
     --bg: var(--green); /** created variable 'bg' for specific color**/
     --fontColor: var(--black); /** created variable 'fontColor' for specific color**/
+    --btnFontColor : var(--white);
+    --btnBg : var(--black);
 }
 
 .dark-theme {
     --bg:var(--black);
     --fontColor:var(--green)
+    --btnFontColor : var(var(--black));
+    --btnBg : var(--white);
 }
 /** 
 body{
@@ -27,6 +31,18 @@ body {
     color: var(--fontColor);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border: radius 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg); /** to override default properties set in body rule **/
+    }
 /**
 ul {
     font-family: Arial, Helvetica, sans-serif;
