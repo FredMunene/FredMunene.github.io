@@ -1,5 +1,5 @@
 'use strict' ; //provide better errors
-const switcher = document.querySelector('.btn') //variable switcher as reference to the button: 
+const switcher = document.querySelector('.btn'); //variable switcher as reference to the button: 
                  //document.queryselector handles css selectors
 switcher.addEventListener('click',function(){ //adding the event handler for click event; Listener for the 'click' event
     document.body.classList.toggle('light-theme'); //toggle method modify 'body' element's class attribute
