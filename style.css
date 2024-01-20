@@ -18,8 +18,8 @@
 
 .dark-theme {
     --bg:var(--black);
-    --fontColor:var(--green)
-    --btnFontColor : var(var(--black)); /**New variable to specify button-specific font color **/
+    --fontColor:var(--green);
+    --btnFontColor: var(--black); /**New variable to specify button-specific font color **/
     --btnBg : var(--white); /**New variable to specify button-specific background color **/
 }
 /** 
