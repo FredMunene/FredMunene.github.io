@@ -14,5 +14,5 @@ switcher.addEventListener('click',function(){ //adding the event handler for cli
         this.textContent = "Light";
     }
     //concole messages to help see results of code
-    console.log('Fred: ' + className)
+    console.log('You are using theme: ' + className)
 });
