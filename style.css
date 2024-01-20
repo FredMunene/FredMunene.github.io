@@ -39,7 +39,7 @@ body {
     height: 50px;
     width: 50px;
     border: radius 50%;
-    border: none;
+    border-color: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg); /** to override default properties set in body rule **/
     }
