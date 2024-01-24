@@ -9,6 +9,12 @@
     background: #0f0;
 }**/
 
+nav{
+    padding: 20px;
+    position: relative;
+    display: flex;
+}
+
 .light-theme {
     --bg: var(--green); /** created variable 'bg' for specific color**/
     --fontColor: var(--black); /** created variable 'fontColor' for specific color**/
@@ -61,3 +67,18 @@ li{
     font-family: monospace;
 }
 **/
+nav{
+    background-color: antiquewhite;
+    padding: 1em;
+    text-align: center;
+}
+.nav_link {
+    color: aliceblue;
+    text-decoration: none;
+    margin: auto;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s;
+}
+.nav_link:hover{
+    background-color:aqua; /* Choose a different color for hovering effect*/
+}
