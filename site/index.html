@@ -1,43 +1,150 @@
 <!DOCTYPE html>
 <html>
+    <!--  -->
     <head>
-        <title>Welcome to my Personal Website  </title>
+        <title>Fred Gitonga  </title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!-- favicon -->
         <link  rel="icon" href="static/favicon.ico">
         <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+        <!-- css -->
         <link rel="stylesheet" href="./style.css" />
 
     </head>
-    <body class="dark-theme">
-        <nav>
-            <a href="./index.html" class="nav_link">Home</a>
-            <a href="./myservices.html" class="nav_link">My Services</a>
-            <a href="./projects.html"class="nav_link">Projects</a>
-            <a href="./contact.html" class="nav_link">Contact</a>
-        </nav>
-        <h1>Introduction</h1>
-        <p id="msg">Junior Software Engineer</p>
-        <ul>
-            <li class="list">Add visual styles</li>
-            <li class="list">Add light and dark themes</li>
-            <li> Enable switching the theme</li>
-            <li class="list">Add nav bar</li>
-        </ul>
-        <div>
-            <button class="btn">Dark</button>
-        </div>
-        <hr>
+    <!--  -->
 
-        <div>
-
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const navMenu = document.querySelector('.nav-menu');
+          
+          menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+          });
+        
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-container')) {
+              navMenu.classList.remove('active');
+            }
+          });
+        });
+        </script>
+        </head>
+        <body>
+        <div class="nav-container">
+          <div class="logo">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
+              <text x="50" y="65" text-anchor="middle" fill="currentColor" style="font-size: 40px;">L</text>
+            </svg>
+          </div>
+          <button class="menu-toggle">
+            <svg viewBox="0 0 24 24">
+              <rect y="2" width="24" height="2" rx="1"/>
+              <rect y="11" width="24" height="2" rx="1"/>
+              <rect y="20" width="24" height="2" rx="1"/>
+            </svg>
+          </button>
+          <nav class="nav-menu">
+            <a href="#intro">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#articles">Articles</a>
+            <a href="#contact">Contact</a>
+          </nav>
         </div>
-        <!--<script>alert('Welcome to my website')</script> -->
-    <script src="./app.js" defer ></script> <!--putting the <script. element at end enables all contents to display before script is loaded-->
-    <noscript>You need to enable JavaScript to view the full site</noscript> <!--example of fault torelance or graceful degradation -->
-    
-    <footer>
-        <a href="mailto:mfredgitonga@gmail.com"title="send me an email" target="_top"><img src="gmail.png" style="width:42px;height:42px;"></a>
-    </footer>
+        
+        <section id="intro">
+          <div class="intro-content">
+            <div class="intro-image">
+
+            </div>
+            <h1>Fred Gitonga</h1>
+            <p>A programmer with an interest in </p>
+          </div>
+          <div class="scroll-down">
+            <div class="scroll-arrow"></div>
+          </div>
+        </section>
+        <!-- about/skills -->
+        <section id="about">
+
+        </section>
+        <!-- projects -->
+        <section id="projects">
+            <div class="projects">
+                <h2>Projects </h2>
+                <p>
+                    <a class="repo-tag" href="">Project Name</a>
+                    <a class="site-tag" href="">Project Name</a>
+                </p>
+                <p>
+                    <a class="repo-tag" href="">Project Name</a>
+                    <a class="site-tag" href="">Project Name</a>
+                </p>
+                <p>
+                    <a class="repo-tag" href="">Project Name</a>
+                    <a class="site-tag" href="">Project Name</a>
+                </p>
+                <p>
+                    <a class="repo-tag" href="">Project Name</a>
+                    <a class="site-tag" href="">Project Name</a>
+                </p>
+            </div>
+
+        </section>
+        <!-- blogs -->
+        <section id="blog">
+            <h2>Blogs </h2>
+            <div class="blog-container">
+                <!-- Blog Card 1 -->
+                <a href="https://your-blog-url-1.com" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fazqqgtl9r1g42jo40faj.png" alt="Blog Post 1">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Pointers in Go Explained</h2>
+                        <p>This is a brief summary of your blog post. It should give readers a quick overview of what the post is about and entice them to click and read more...</p>
+                    </div>
+                </a>
+        
+                <!-- Blog Card 2 -->
+                <a href="https://dev.to/fredgitonga/errors-are-values-a-guide-to-error-handling-in-go-3ohi" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjb8w85jx3l94o1v2onsz.png" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Errors are Values: A Guide to Error Handling in Go</h2>
+                        <p>Another engaging summary that captures the essence of your blog post and makes readers want to learn more about the topic...</p>
+                    </div>
+                </a>
+                <!-- Blog Card 3 -->
+                <a href="https://dev.to/fredgitonga/errors-are-values-a-guide-to-error-handling-in-go-3ohi" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Ftn4v8mduf4bnrsohoxhu.png" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <h2>My TDD Journey: How It Saved My Go Code (and My Sanity!) </h2>
+                        <p>Another engaging summary that captures the essence of your blog post and makes readers want to learn more about the topic...</p>
+                    </div>
+                </a>
+                <!-- Blog Card 4 -->
+                <a href="https://dev.to/fredgitonga/building-a-simple-restful-api-in-go-for-managing-blog-posts-41h3" class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://media2.dev.to/dynamic/image/format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F88nel10q3vciv1yhw54q.png" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <h2>Building a Simple RESTful API in Go for Managing Blog Posts  </h2>
+                        <p>Another engaging summary that captures the essence of your blog post and makes readers want to learn more about the topic...</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- contact/call to action -->
+        <section id="contact">
+
+        </section>
 </body>
 </html>
