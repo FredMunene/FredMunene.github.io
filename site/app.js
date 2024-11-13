@@ -1,18 +1,58 @@
-'use strict' ; //provide better errors
-const switcher = document.querySelector('.btn'); //variable switcher as reference to the button: 
-                 //document.queryselector handles css selectors
-switcher.addEventListener('click',function(){ //adding the event handler for click event; Listener for the 'click' event
-    document.body.classList.toggle('light-theme'); //toggle method modify 'body' element's class attribute
-    document.body.classList.toggle('dark-theme');
+require("dotenv").config();
 
-    //to update the label of the button with the correct theme
-    //if theme is Light, label reads "Dark", else "Light"
-    const className = document.body.className;
-    if(className == "light-theme"){ 
-        this.textContent = "Dark";
-    } else  {
-        this.textContent = "Light";
-    }
-    //concole messages to help see results of code
-    console.log('You are using theme: ' + className)
+const express = require("express");
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const path = require("path");
+
+
+const app = express();
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended:true}))
+
+// Serve the index.html file
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
 });
+
+// Serve static files from the "static" folder
+app.use("/static", express.static("static"));
+
+
+const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port:587,
+    secure: false,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+app.post("/submit", async(req, res) => {
+    console.log(req.body);
+    const {name, email,subject,message} = req.body;
+
+    try {
+        const info = await transporter.sendMail({
+            from: `"Fred Munene Gitonga" <mfredgitonga@gmail.com>`,
+            to: `${name} <mikeburns9990@gmail.com`,
+            subject: subject,
+            text: message,
+            html: `<b>${message}</b>`,
+            replyTo: email,
+        })
+        console.log("Message sent: %s", info.messageId);
+        res.status(200).send("Email sent successfully!");
+    } catch(error) {
+        console.error("Error sending email: ", error);
+        res.status(500).send("Failed to send email");
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server learning on http:\\localhost:${PORT}`)
+})
