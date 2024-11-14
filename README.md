@@ -14,7 +14,8 @@ A portfolio website built to showcase my skills, projects, blogs, and more.
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/FredMunene/FredMunene.git
+    git clone https://github.com/FredMunene/FredMunene.github.io.git
+    cd FredMunene.github.io
     ```
 2.  Install dependencies
     ```bash
