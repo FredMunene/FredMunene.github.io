@@ -370,6 +370,10 @@
                 feedbackMessage.textContent = "Failed to send message. Please try again after a while";
                 feedbackMessage.style.color = "red";
               }
+
+              setTimeout(() => {
+                feedbackMessage.textContent = "";
+              },4000);
             } catch (error){
               feedbackMessage.textContent = "An error occurred. Please try again.";
               feedbackMessage.style.color = "red";
