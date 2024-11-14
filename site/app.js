@@ -4,12 +4,15 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const path = require("path");
+const multer = require("multer"); 
 
 
 const app = express();
+const upload = multer();
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(upload.none());
 
 // Serve the index.html file
 app.get("/", (req, res) => {
@@ -31,13 +34,13 @@ const transporter = nodemailer.createTransport({
   });
 
 app.post("/submit", async(req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const {name, email,subject,message} = req.body;
 
     try {
         const info = await transporter.sendMail({
             from: `"Fred Munene Gitonga" <mfredgitonga@gmail.com>`,
-            to: `${name} <mikeburns9990@gmail.com`,
+            to: `"Fred" <munene205gitonga0@gmail.com`,
             subject: subject,
             text: message,
             html: `<b>${message}</b>`,
@@ -56,3 +59,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server learning on http:\\localhost:${PORT}`)
 })
+
+// app.listen(300, '0.0.0.0');
