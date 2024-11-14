@@ -207,9 +207,56 @@
 
         <!-- services -->
         <section id="services">
-          <h2>Services</h2>
-
-        </section>
+          <div class="service-intro">
+              <h2>Services</h2>
+              <h1>What Can I Do For You?</h1>
+          </div>
+      
+          <div class="services-content">
+              <div class="services-list">
+                  <div class="service">
+                      <span class="icon">
+                          <i class="fas fa-globe"></i>
+                      </span>
+                      <div class="service-content">
+                          <h3>WEB DEVELOPMENT</h3>
+                          <p class="desc">Deliver responsive web development services, including frontend and backend development, optimizing performance, ensuring security, and integrating APIs for seamless functionality.</p>
+                      </div>
+                  </div>
+      
+                  <div class="service">
+                      <span class="icon">
+                          <i class="fas fa-clock"></i>
+                      </span>
+                      <div class="service-content">
+                          <h3>UX/UI DESIGN</h3>
+                          <p class="desc">Provide  user research, wireframing, prototyping, visual design, and usability testing to create intuitive, user-centered digital experiences.</p>
+                      </div>
+                  </div>
+      
+                  <div class="service">
+                      <span class="icon">
+                          <i class="fas fa-book"></i>
+                      </span>
+                      <div class="service-content">
+                          <h3>BACKEND DEVELOPMENT</h3>
+                          <p class="desc">Develop robust backend systems, ensuring secure, efficient data handling and smooth logic, with optimized code and database queries for high performance.</p>
+                      </div>
+                  </div>
+      
+                  <div class="service">
+                      <span class="icon">
+                          <i class="fas fa-heart"></i>
+                      </span>
+                      <div class="service-content">
+                          <h3>API DEVELOPMENT AND INTEGRATION</h3>
+                          <p class="desc">Design, develop, and implement RESTful APIs for seamless data exchange, integrating third-party APIs to enhance client functionality while ensuring top-tier security, scalability, and optimized performance.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="nav-dots"></div>
+          </div>
+      </section>
 
         <!-- contact/call to action -->
         <section id="contact">
@@ -308,10 +355,6 @@
             const feedbackMessage = document.getElementById("feedbackMessage");
             feedbackMessage.textContent = "";
 
-            // Log the form data
-            formData.forEach((value, key) => {
-                console.log(key + ": " + value); // Check if 'email' is being sent
-            });
           
             try {
               const response = await fetch("/submit", {
@@ -334,5 +377,47 @@
             }
           });
         </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              const servicesList = document.querySelector('.services-list');
+              const services = document.querySelectorAll('.service');
+              const navDots = document.querySelector('.nav-dots');
+              let currentIndex = 0;
+              const serviceWidth = 310; // Width of service + gap
+          
+              // Create navigation dots
+              const numDots = Math.max(0, services.length - 2);
+              for(let i = 0; i < numDots; i++) {
+                  const dot = document.createElement('span');
+                  dot.classList.add('dot');
+                  if (i === 0) dot.classList.add('active');
+                  navDots.appendChild(dot);
+                  
+                  dot.addEventListener('click', () => {
+                      currentIndex = i;
+                      updateCarousel();
+                  });
+              }
+          
+              const dots = document.querySelectorAll('.dot');
+          
+              function updateCarousel() {
+                  const translation = -currentIndex * serviceWidth;
+                  servicesList.style.transform = `translateX(${translation}px)`;
+          
+                  services.forEach((service, index) => {
+                      const isVisible = index >= currentIndex && index < currentIndex + 3;
+                      service.style.opacity = isVisible ? '1' : '0';
+                      service.style.visibility = isVisible ? 'visible' : 'hidden';
+                  });
+          
+                  dots.forEach((dot, index) => {
+                      dot.classList.toggle('active', index === currentIndex);
+                  });
+              }
+          
+              updateCarousel();
+          });
+          </script>
 </body>
 </html>
