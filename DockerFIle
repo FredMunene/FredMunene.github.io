@@ -1,5 +1,5 @@
 # Node.js image
-FROM 23-alpine
+FROM node:18-alpine
 
 # Set wotking directory in conatiner
 WORKDIR /usr/src/app
@@ -21,4 +21,4 @@ EXPOSE 3000
 
 
 #Command to run the app
-CMD [ "node" "app.js" ]
+CMD [ "node", "app.js" ]
