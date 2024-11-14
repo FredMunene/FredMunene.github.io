@@ -23,7 +23,7 @@ A portfolio website built to showcase my skills, projects, blogs, and more.
     ```
 3. Set environment variables in the file `.env` for `Email` and `App Password` . I used [Google App passwords](https://myaccount.google.com/apppasswords). Read about it [here](https://knowledge.workspace.google.com/kb/how-to-create-app-passwords-000009237).
    
-Example `.env` file:
+    Example `.env` file:
     ```plaintext
     EMAIL_USER=your-email@example.com
     EMAIL_PASS=your-app-password
