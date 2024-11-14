@@ -1,0 +1,24 @@
+# Node.js image
+FROM 23-alpine
+
+# Set wotking directory in conatiner
+WORKDIR /usr/src/app
+
+#copy package json files to working directory
+COPY package* ./
+
+#install dependencies
+RUN npm install
+
+# copy source code into working directroy
+COPY site /usr/src/app
+
+# Copy .env file into container
+COPY site/.env .env
+
+#Expose port app is running on
+EXPOSE 3000
+
+
+#Command to run the app
+CMD [ "node" "app.js" ]
