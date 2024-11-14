@@ -40,11 +40,11 @@ app.post("/submit", async(req, res) => {
     try {
         const info = await transporter.sendMail({
             from: `"Fred Munene Gitonga" <mfredgitonga@gmail.com>`,
-            to: `"Mike" <mikeburns9990@gmail.com`,
+            to: `"Mike" mikeburns9990@gmail.com`,
             subject: subject,
             text: message,
             html: `<b>${message}</b>`,
-            replyTo: email,
+            replyTo: `"${name}" ${email}`,
         })
         console.log("Message sent: %s", info.messageId);
         res.status(200).send("Email sent successfully!");
