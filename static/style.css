@@ -696,7 +696,7 @@ button:hover {
   flex: 0 0 40px;
   width: 40px;
   height: 40px;
-  background-color: #007BFF;
+  background-color:#399cbd;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -849,7 +849,7 @@ button:hover {
   display: inline-block;
   width: clamp(40px, 8vw, 60px);
   height: clamp(40px, 8vw, 60px);
-  background: #007BFF;;
+  background: #399cbd;
   border-radius: 50%;
   margin-bottom: 20px;
   position: relative;
@@ -948,3 +948,52 @@ button:hover {
 .service {
   animation: fadeIn 0.6s ease forwards;
 }
+
+/* skills */
+#stats {
+  /* background: #121212; /* Slightly lighter black for a softer look */
+  /* padding-top:2rem; Adjusted for balanced spacing */
+  /* padding-bottom: 4rem; */
+  text-align: center; 
+}
+
+#stats .row {
+  /* max-width: 1440px; */
+  display: flex;
+  /* margin: 0 auto;  */
+  text-align: center;
+  /* Center align content */
+}
+
+@media (min-width: 768px) {
+  #stats .row {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+
+#stats .icon-part i { 
+  font-size: 4rem; 
+  color: #399cbd;
+   /* Gold color for icons */
+}
+
+
+
+ #stats .stat-title {
+  color: rgba(255, 255, 255, 0.75);
+  /* Slightly more opaque for better visibility */
+   font-size: 1rem;
+   margin-top: 1.2rem;
+}  
+
+#stats .bgrid.stat {
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+}
+
+
+
