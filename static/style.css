@@ -165,8 +165,8 @@ body {
     width: 100%;
     padding: 20px;
     text-align: center;
-    margin-top: 8rem;
-    margin-bottom: 8em;
+    /* margin-top: rem; */
+    margin-bottom: 3rem;
 }
 
 .projects {
@@ -245,7 +245,7 @@ p:has(> a:only-child) .repo-tag {
 /* blogs */
  h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 2rem;
   color: #ffffff}
 
@@ -253,7 +253,7 @@ p:has(> a:only-child) .repo-tag {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
   }
 
   .blog-container {
@@ -620,7 +620,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh; 
+  /* min-height: 100vh;  */
   /* min-width: 1200px; */
   margin: 0 auto;
   padding: 100p;
@@ -629,7 +629,7 @@ button:hover {
 }
 .section-intro {
   text-align: center;
-  margin-bottom: 40px;
+  /* margin-bottom: px; */
 }
 
 .section-intro h5 {
@@ -785,7 +785,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 20px;
   box-sizing: border-box;
 }
@@ -798,23 +798,7 @@ button:hover {
   width: 100%
 }
 
-/* #h1 {
-  font-size: 3rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-} */
 
-/* h5 {
-  color: #e74c3c;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-} */
-
- /* .lead {
-  font-size: 1.2rem;
-  color: #7f8c8d;
-} */
 
 .services-content {
   width: 100%;
@@ -955,6 +939,11 @@ button:hover {
   /* padding-top:2rem; Adjusted for balanced spacing */
   /* padding-bottom: 4rem; */
   text-align: center; 
+  margin-bottom: 3rem;
+}
+
+#stats h2{
+  margin: 2rem;
 }
 
 #stats .row {
