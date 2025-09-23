@@ -300,7 +300,7 @@ h1, h2 {
     padding: 12px 24px;
     background-color: #fff;
     color: #000;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
     font-size: 16px;
@@ -311,13 +311,13 @@ h1, h2 {
 .tab-button:hover {
     color: #fff;
     background-color: #000;
-    border-color: #000;
+    border-color: #fff;
 }
 
 .tab-button.active {
     color: #fff;
     background-color: #000;
-    border-color: #000;
+    border-color: #fff;
 }
 
 .category {
