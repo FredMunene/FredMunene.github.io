@@ -836,7 +836,7 @@ button:hover {
 .timeline-ico {
   width: 50px;  /* Increased size */
   height: 50px;  /* Increased size */
-  background-color: var(--main-color);
+  background-color: #000000;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -845,7 +845,7 @@ button:hover {
 }
 
 .timeline-ico i {
-  color: var(--text-color);
+  color: #FFFFFF;
   font-size: clamp(1.2rem, 2vw, 1.4rem);  /* Increased size */
 }
 
@@ -989,6 +989,8 @@ button:hover {
 .service-section {
   padding: 20px;
   text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.164);
+  border-radius: 5px;
 }
 
 .text-block {
