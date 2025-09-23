@@ -1,0 +1,30 @@
+{
+  "leadingTalks": [
+    {
+      "src": "static/fred-speaking-aug.jpg",
+      "alt": "Fred speaking at Onchain summer Kisumu meetup in Aug",
+      "date": "August 2025",
+      "subtitle": "Led the Onchain Summer Kisumu Meetup"
+    },
+    {
+      "src": "static/EthiopiaPitch.jpg",
+      "alt": "Fred pitching Imara during Ethiopia Popup city residency",
+      "date": "2025",
+      "subtitle": "Imara Pitch at Ethiopia Popup City Residency"
+    }
+  ],
+  "awards": [
+    {
+      "src": "static/liskcohort.jpg",
+      "alt": "Fred receiving award after completing Lisk Solidity Cohort 7",
+      "date": "March 2025",
+      "subtitle": "Tony Olendo, Presenting Lisk Solidity Cohort 7 Completion Award"
+    },
+    {
+      "src": "static/awardedUG.jpg",
+      "alt": "Fred receiving Blockchain Devfest hackathon award",
+      "date": "June 2025",
+      "subtitle": "David Lumala Presenting Blockchain Devfest Hackathon Award"
+    }
+  ]
+}

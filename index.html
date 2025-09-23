@@ -83,7 +83,20 @@
                 <div class="timeline-wrap">
                     <div class="timeline-block">
                         <div class="timeline-header">
-                            <h4>Software Developer</h4>
+                            <h4>Chief Technology Officer (CTO)</h4>
+                            <p>March 2025 - Present</p>
+                        </div>
+                        <div class="timeline-ico">
+                          <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h4>Imara – Kenya</h4>
+                            <p>Leading the technical vision and strategy for Imara, a platform empowering developers to launch projects, collaborate cross-border, and gain visibility. Responsible for designing and overseeing the architecture of scalable software, smart contracts, and blockchain-based systems. Drive product development, implement secure and efficient backend solutions, and mentor a growing team of developers to deliver innovative, high-quality applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-block">
+                        <div class="timeline-header">
+                            <h4>Fullstack Software Developer</h4>
                             <p>April 2024 - Present</p>
                         </div>
                         <div class="timeline-ico">
@@ -91,7 +104,7 @@
                         </div>
                         <div class="timeline-content">
                             <h4>Zone01 (Kisumu - Kenya)</h4>
-                            <p>Building web applications and developing software applications. Proficient in debugging, problem-solving, and implementing solutions using languages like Go and C. Strong understanding of software development principles, version control, testing, and web technologies. </p>
+                            <p>Building web applications and developing software applications. Proficient in debugging, problem-solving, and implementing solutions using languages like Go and Solidity. Strong understanding of software development principles, version control, testing, and web technologies.</p>
                         </div>
                     </div>
                 </div>
@@ -242,6 +255,28 @@
             </a>
           </div>
         </footer>
+
+        <!-- Gift Box -->
+        <div id="giftbox" onclick="showAwardsModal()">
+            <img src="static/giftbox.gif" alt="Gift Box">
+        </div>
+
+        <!-- Awards Modal -->
+        <div id="awards-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAwardsModal()">&times;</span>
+                <h2>Achievements</h2>
+                <div class="subsection">
+                    <h3>Leading Talks</h3>
+                    <div id="leading-talks-images"></div>
+                </div>
+                <div class="subsection">
+                    <h3>Receiving Awards</h3>
+                    <div id="awards-images"></div>
+                </div>
+            </div>
+        </div>
+
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const username = 'FredMunene';
@@ -361,10 +396,63 @@
                         scrollPrompt.style.opacity = '0.7';
                     }
                 });
-            });
-        </script>
-        <script>
-          document.addEventListener('DOMContentLoaded', function() {
+    });
+    </script>
+    <script>
+        function showAwardsModal() {
+            document.getElementById('awards-modal').style.display = 'block';
+            // Load images if not already loaded
+            if (!document.querySelector('#leading-talks-images img')) {
+                fetch('static/awards.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Leading Talks
+                        const leadingContainer = document.getElementById('leading-talks-images');
+                        data.leadingTalks.forEach(item => {
+                            const img = document.createElement('img');
+                            img.src = item.src;
+                            img.alt = item.alt;
+                            img.style.maxWidth = '100%';
+                            img.style.height = 'auto';
+                            const caption = document.createElement('p');
+                            caption.textContent = `${item.date} - ${item.subtitle}`;
+                            caption.style.fontSize = '0.9rem';
+                            caption.style.color = '#ccc';
+                            const div = document.createElement('div');
+                            div.style.marginBottom = '20px';
+                            div.appendChild(img);
+                            div.appendChild(caption);
+                            leadingContainer.appendChild(div);
+                        });
+                        // Awards
+                        const awardsContainer = document.getElementById('awards-images');
+                        data.awards.forEach(item => {
+                            const img = document.createElement('img');
+                            img.src = item.src;
+                            img.alt = item.alt;
+                            img.style.maxWidth = '100%';
+                            img.style.height = 'auto';
+                            const caption = document.createElement('p');
+                            caption.textContent = `${item.date} - ${item.subtitle}`;
+                            caption.style.fontSize = '0.9rem';
+                            caption.style.color = '#ccc';
+                            const div = document.createElement('div');
+                            div.style.marginBottom = '20px';
+                            div.appendChild(img);
+                            div.appendChild(caption);
+                            awardsContainer.appendChild(div);
+                        });
+                    })
+                    .catch(error => console.error('Error loading awards:', error));
+            }
+        }
+
+        function closeAwardsModal() {
+            document.getElementById('awards-modal').style.display = 'none';
+        }
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
               const servicesList = document.querySelector('.services-list');
               const services = document.querySelectorAll('.service');
               const navDots = document.querySelector('.nav-dots');
