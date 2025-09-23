@@ -267,11 +267,11 @@
                 <span class="close" onclick="closeAwardsModal()">&times;</span>
                 <h2>Achievements</h2>
                 <div class="subsection">
-                    <h3>Leading Talks</h3>
+                    <h3>Talks</h3>
                     <div id="leading-talks-images"></div>
                 </div>
                 <div class="subsection">
-                    <h3>Receiving Awards</h3>
+                    <h3>Awards</h3>
                     <div id="awards-images"></div>
                 </div>
             </div>
@@ -406,9 +406,9 @@
                 fetch('static/awards.json')
                     .then(response => response.json())
                     .then(data => {
-                        // Leading Talks
+                        // Talks
                         const leadingContainer = document.getElementById('leading-talks-images');
-                        data.leadingTalks.forEach(item => {
+                        data.Talks.forEach(item => {
                             const img = document.createElement('img');
                             img.src = item.src;
                             img.alt = item.alt;
@@ -426,7 +426,7 @@
                         });
                         // Awards
                         const awardsContainer = document.getElementById('awards-images');
-                        data.awards.forEach(item => {
+                        data.Awards.forEach(item => {
                             const img = document.createElement('img');
                             img.src = item.src;
                             img.alt = item.alt;

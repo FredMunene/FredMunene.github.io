@@ -1,5 +1,5 @@
 {
-  "leadingTalks": [
+  "Talks": [
     {
       "src": "static/fred-speaking-aug.jpg",
       "alt": "Fred speaking at Onchain summer Kisumu meetup in Aug",
@@ -13,7 +13,7 @@
       "subtitle": "Imara Pitch at Ethiopia Popup City Residency"
     }
   ],
-  "awards": [
+  "Awards": [
     {
       "src": "static/liskcohort.jpg",
       "alt": "Fred receiving award after completing Lisk Solidity Cohort 7",

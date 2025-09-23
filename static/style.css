@@ -1402,6 +1402,12 @@ section {
     margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+    #giftbox {
+        top: 100%;
+    }
+}
+
 /* Increase container widths */
 .container, 
 .form-container,
