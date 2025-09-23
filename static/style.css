@@ -163,6 +163,18 @@ p {
   justify-content: center;
   text-align: center;
   padding: 0 20px;
+  position: relative;
+}
+
+.scroll-prompt {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 2rem;
+  font-weight: normal;
 }
 
 .intro-content {
@@ -284,7 +296,7 @@ h1, h2 {
   margin-bottom: 30px;
   font-weight: bold;
   color: var(--text-color);
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 /* Tabs for projects */
@@ -963,7 +975,37 @@ button:hover {
   padding: 40px 20px;
   max-width: 800px;
   margin: 0 auto;
-  width: 100%
+  width: 100%;
+}
+
+.services-content {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.service-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.text-block {
+  /* no max-width, full width of column */
+}
+
+.text-block h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.text-block p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 
