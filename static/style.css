@@ -1349,6 +1349,18 @@ section {
     display: block;
 }
 
+@media screen and (max-width: 768px) {
+    #giftbox {
+        top: 25% !important;
+        right: 10px !important;
+    }
+    
+    #giftbox img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
 /* Modal */
 .modal {
     display: none;
