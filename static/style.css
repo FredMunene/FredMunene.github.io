@@ -1,9 +1,9 @@
 :root {
-  --main-color: #FF6B00;  /* Orange */
+  --main-color: #FFFFFF;  /* White */
   --bg-color: #000000;    /* Black */
   --text-color: #FFFFFF;  /* White */
-  --accent-color: #007BFF; /* Blue */
-  --text-muted: rgba(255, 255, 255, 0.7);
+  --accent-color: #000000; /* Black */
+  --text-muted: #FFFFFF;
 }
 
 * {
@@ -285,6 +285,56 @@ h1, h2 {
   font-weight: bold;
   color: var(--text-color);
   font-size: 2.5rem;
+}
+
+/* Tabs for projects */
+.tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    font-size: 16px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.tab-button:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.tab-button.active {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.category {
+    display: none;
+}
+
+.category.active {
+    display: block;
+}
+
+.category p {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #stats h2 {
