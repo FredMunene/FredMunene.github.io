@@ -279,11 +279,14 @@
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                const username = 'FredMunene';
-                const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`;
-                fetch(apiUrl)
+                fetch('/static/projects.json')
                     .then(response => response.json())
-                    .then(repos => {
+                    .then(data => {
+                        const repos = data.repos;
+                        if (!Array.isArray(repos)) {
+                            console.error('Projects data is not an array:', repos);
+                            return;
+                        }
                         const categories = {};
                         repos.forEach(repo => {
                             if (repo.topics && repo.topics.length > 0) {
@@ -349,7 +352,7 @@
                             });
                         });
                     })
-                    .catch(error => console.error('Error fetching repos:', error));
+                    .catch(error => console.error('Error loading projects:', error));
             });
         </script>
         <script>
