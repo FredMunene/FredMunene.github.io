@@ -1,6 +1,32 @@
 {
-  "lastUpdated": "2025-09-24T09:12:51.568Z",
+  "lastUpdated": "2025-09-29T01:01:46.518Z",
   "repos": [
+    {
+      "name": "Oncure",
+      "html_url": "https://github.com/FredMunene/Oncure",
+      "homepage": "https://oncare-nine.vercel.app",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
+      "updated_at": "2025-09-27T20:29:58Z"
+    },
+    {
+      "name": "go-iam",
+      "html_url": "https://github.com/FredMunene/go-iam",
+      "homepage": "https://goiam.dev",
+      "topics": [],
+      "description": "iam platform written in golang",
+      "updated_at": "2025-09-26T10:28:48Z"
+    },
+    {
+      "name": "campus_student_course-lecturer_review_analysis",
+      "html_url": "https://github.com/FredMunene/campus_student_course-lecturer_review_analysis",
+      "homepage": null,
+      "topics": [],
+      "description": "An end-to-end Python toolkit that cleans student survey data, standardizes lecturer/course names, computes sentiment and satisfaction scores, and produces exportable reports (PDF/Word) and visual dashboards.",
+      "updated_at": "2025-09-25T16:01:40Z"
+    },
     {
       "name": "FredMunene.github.io",
       "html_url": "https://github.com/FredMunene/FredMunene.github.io",
@@ -9,7 +35,7 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2025-09-24T09:04:16Z"
+      "updated_at": "2025-09-24T09:13:47Z"
     },
     {
       "name": "ETHiopia-Builder-Journal",
@@ -248,16 +274,6 @@
       ],
       "description": "A token-rewarded accountability app built on Base Minikit that helps users complete tasks through buddy verification and social incentives. Users can optionally stake money to double their token rewards, creating stronger commitment mechanisms.",
       "updated_at": "2025-09-23T09:18:26Z"
-    },
-    {
-      "name": "Oncure",
-      "html_url": "https://github.com/FredMunene/Oncure",
-      "homepage": "https://oncare-nine.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
-      "updated_at": "2025-09-23T09:16:53Z"
     },
     {
       "name": "eauti",
