@@ -1,6 +1,32 @@
 {
-  "lastUpdated": "2025-09-29T01:01:46.518Z",
+  "lastUpdated": "2025-10-06T01:01:04.194Z",
   "repos": [
+    {
+      "name": "legstrong",
+      "html_url": "https://github.com/FredMunene/legstrong",
+      "homepage": "https://legstrong.vercel.app",
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-10-05T07:54:12Z"
+    },
+    {
+      "name": "go-iam",
+      "html_url": "https://github.com/FredMunene/go-iam",
+      "homepage": "https://goiam.dev",
+      "topics": [],
+      "description": "iam platform written in golang",
+      "updated_at": "2025-09-30T19:33:39Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-09-29T01:01:50Z"
+    },
     {
       "name": "Oncure",
       "html_url": "https://github.com/FredMunene/Oncure",
@@ -12,30 +38,12 @@
       "updated_at": "2025-09-27T20:29:58Z"
     },
     {
-      "name": "go-iam",
-      "html_url": "https://github.com/FredMunene/go-iam",
-      "homepage": "https://goiam.dev",
-      "topics": [],
-      "description": "iam platform written in golang",
-      "updated_at": "2025-09-26T10:28:48Z"
-    },
-    {
       "name": "campus_student_course-lecturer_review_analysis",
       "html_url": "https://github.com/FredMunene/campus_student_course-lecturer_review_analysis",
       "homepage": null,
       "topics": [],
       "description": "An end-to-end Python toolkit that cleans student survey data, standardizes lecturer/course names, computes sentiment and satisfaction scores, and produces exportable reports (PDF/Word) and visual dashboards.",
       "updated_at": "2025-09-25T16:01:40Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-09-24T09:13:47Z"
     },
     {
       "name": "ETHiopia-Builder-Journal",
