@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2025-10-06T01:01:04.194Z",
+  "lastUpdated": "2025-10-13T01:04:34.073Z",
   "repos": [
+    {
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.vercel.app/",
+      "topics": [
+        "blockchain"
+      ],
+      "description": null,
+      "updated_at": "2025-10-11T09:41:41Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-10-06T01:01:08Z"
+    },
     {
       "name": "legstrong",
       "html_url": "https://github.com/FredMunene/legstrong",
@@ -16,16 +36,6 @@
       "topics": [],
       "description": "iam platform written in golang",
       "updated_at": "2025-09-30T19:33:39Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-09-29T01:01:50Z"
     },
     {
       "name": "Oncure",
