@@ -1,6 +1,35 @@
 {
-  "lastUpdated": "2025-10-13T01:04:34.073Z",
+  "lastUpdated": "2025-10-20T01:06:11.130Z",
   "repos": [
+    {
+      "name": "go-iam",
+      "html_url": "https://github.com/FredMunene/go-iam",
+      "homepage": "https://goiam.dev",
+      "topics": [],
+      "description": "iam platform written in golang",
+      "updated_at": "2025-10-16T20:06:23Z"
+    },
+    {
+      "name": "graphql",
+      "html_url": "https://github.com/FredMunene/graphql",
+      "homepage": "https://fredmunene.github.io/graphql/",
+      "topics": [
+        "skillset",
+        "technology"
+      ],
+      "description": "A secure, data-driven profile page built with GraphQL and JWT authentication. It allows Zone01 users to log in safely, fetch personalized data, and view their statistics visualized through interactive SVG charts.",
+      "updated_at": "2025-10-14T09:46:27Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-10-13T01:04:37Z"
+    },
     {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
@@ -12,30 +41,12 @@
       "updated_at": "2025-10-11T09:41:41Z"
     },
     {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-10-06T01:01:08Z"
-    },
-    {
       "name": "legstrong",
       "html_url": "https://github.com/FredMunene/legstrong",
       "homepage": "https://legstrong.vercel.app",
       "topics": [],
       "description": null,
       "updated_at": "2025-10-05T07:54:12Z"
-    },
-    {
-      "name": "go-iam",
-      "html_url": "https://github.com/FredMunene/go-iam",
-      "homepage": "https://goiam.dev",
-      "topics": [],
-      "description": "iam platform written in golang",
-      "updated_at": "2025-09-30T19:33:39Z"
     },
     {
       "name": "Oncure",
@@ -313,17 +324,6 @@
       ],
       "description": "A Go-based LinkedIn automation bot that allows you to post text updates, articles, and images to LinkedIn using the LinkedIn API.",
       "updated_at": "2025-09-23T09:04:41Z"
-    },
-    {
-      "name": "graphql",
-      "html_url": "https://github.com/FredMunene/graphql",
-      "homepage": "https://fredmunene.github.io/graphql/",
-      "topics": [
-        "skillset",
-        "technology"
-      ],
-      "description": "A secure, data-driven profile page built with GraphQL and JWT authentication. It allows Zone01 users to log in safely, fetch personalized data, and view their statistics visualized through interactive SVG charts.",
-      "updated_at": "2025-09-23T08:57:56Z"
     },
     {
       "name": "winzzers",
