@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2025-10-20T01:06:11.130Z",
+  "lastUpdated": "2025-10-27T01:08:05.772Z",
   "repos": [
+    {
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.vercel.app/",
+      "topics": [
+        "blockchain"
+      ],
+      "description": null,
+      "updated_at": "2025-10-25T11:31:26Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-10-20T01:06:15Z"
+    },
     {
       "name": "go-iam",
       "html_url": "https://github.com/FredMunene/go-iam",
@@ -19,26 +39,6 @@
       ],
       "description": "A secure, data-driven profile page built with GraphQL and JWT authentication. It allows Zone01 users to log in safely, fetch personalized data, and view their statistics visualized through interactive SVG charts.",
       "updated_at": "2025-10-14T09:46:27Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-10-13T01:04:37Z"
-    },
-    {
-      "name": "topizzy",
-      "html_url": "https://github.com/FredMunene/topizzy",
-      "homepage": "https://topizzy.vercel.app/",
-      "topics": [
-        "blockchain"
-      ],
-      "description": null,
-      "updated_at": "2025-10-11T09:41:41Z"
     },
     {
       "name": "legstrong",
