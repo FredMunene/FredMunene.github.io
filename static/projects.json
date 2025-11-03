@@ -1,6 +1,48 @@
 {
-  "lastUpdated": "2025-10-27T01:08:05.772Z",
+  "lastUpdated": "2025-11-03T01:06:47.772Z",
   "repos": [
+    {
+      "name": "railway",
+      "html_url": "https://github.com/FredMunene/railway",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-11-02T23:14:46Z"
+    },
+    {
+      "name": "conxx",
+      "html_url": "https://github.com/FredMunene/conxx",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-10-30T07:31:42Z"
+    },
+    {
+      "name": "Oncure",
+      "html_url": "https://github.com/FredMunene/Oncure",
+      "homepage": "https://oncare-nine.vercel.app",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
+      "updated_at": "2025-10-30T07:25:51Z"
+    },
+    {
+      "name": "FredMunene",
+      "html_url": "https://github.com/FredMunene/FredMunene",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-10-28T13:07:32Z"
+    },
+    {
+      "name": "legstrong",
+      "html_url": "https://github.com/FredMunene/legstrong",
+      "homepage": "https://legstrong.vercel.app",
+      "topics": [],
+      "description": "An interactive space habitat design tool for students and professionals, combining AI-powered component generation with real-time 3D visualization and NASA guideline validation",
+      "updated_at": "2025-10-27T16:40:59Z"
+    },
     {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
@@ -8,8 +50,8 @@
       "topics": [
         "blockchain"
       ],
-      "description": null,
-      "updated_at": "2025-10-25T11:31:26Z"
+      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
+      "updated_at": "2025-10-27T16:39:30Z"
     },
     {
       "name": "FredMunene.github.io",
@@ -19,15 +61,7 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2025-10-20T01:06:15Z"
-    },
-    {
-      "name": "go-iam",
-      "html_url": "https://github.com/FredMunene/go-iam",
-      "homepage": "https://goiam.dev",
-      "topics": [],
-      "description": "iam platform written in golang",
-      "updated_at": "2025-10-16T20:06:23Z"
+      "updated_at": "2025-10-27T01:08:09Z"
     },
     {
       "name": "graphql",
@@ -39,24 +73,6 @@
       ],
       "description": "A secure, data-driven profile page built with GraphQL and JWT authentication. It allows Zone01 users to log in safely, fetch personalized data, and view their statistics visualized through interactive SVG charts.",
       "updated_at": "2025-10-14T09:46:27Z"
-    },
-    {
-      "name": "legstrong",
-      "html_url": "https://github.com/FredMunene/legstrong",
-      "homepage": "https://legstrong.vercel.app",
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-10-05T07:54:12Z"
-    },
-    {
-      "name": "Oncure",
-      "html_url": "https://github.com/FredMunene/Oncure",
-      "homepage": "https://oncare-nine.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
-      "updated_at": "2025-09-27T20:29:58Z"
     },
     {
       "name": "campus_student_course-lecturer_review_analysis",
@@ -344,14 +360,6 @@
       ],
       "description": "A React-based web app that lets attendees of the Ethereum@10 Kisumu event (July 30, 2025) quickly create beautiful, shareable, and print-ready personalized attendance posters. Users enter their name and photo the app applies one of several curated templates, produces a high-resolution poster (PNG/PDF/SVG), and provides download option",
       "updated_at": "2025-09-23T08:39:38Z"
-    },
-    {
-      "name": "FredMunene",
-      "html_url": "https://github.com/FredMunene/FredMunene",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-07-20T09:34:19Z"
     },
     {
       "name": "donation_website",
