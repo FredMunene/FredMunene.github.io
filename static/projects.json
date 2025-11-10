@@ -1,13 +1,34 @@
 {
-  "lastUpdated": "2025-11-03T01:06:47.772Z",
+  "lastUpdated": "2025-11-10T01:07:08.324Z",
   "repos": [
+    {
+      "name": "octant-mini",
+      "html_url": "https://github.com/FredMunene/octant-mini",
+      "homepage": "https://octant-mini-two.vercel.app",
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-11-08T11:42:17Z"
+    },
     {
       "name": "railway",
       "html_url": "https://github.com/FredMunene/railway",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-11-02T23:14:46Z"
+      "homepage": "",
+      "topics": [
+        "blockchain",
+        "defi"
+      ],
+      "description": "Railway is a production-shaped fiat-to-crypto minting slice that pairs upgradeable Solidity contracts with a Go API to accept HMAC-signed mint intents, enforce compliance via a user registry, execute mints through a retrying webhook pipeline, and expose observability via Prometheus/Grafana.",
+      "updated_at": "2025-11-05T07:16:31Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-11-03T01:06:51Z"
     },
     {
       "name": "conxx",
@@ -52,16 +73,6 @@
       ],
       "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
       "updated_at": "2025-10-27T16:39:30Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-10-27T01:08:09Z"
     },
     {
       "name": "graphql",
