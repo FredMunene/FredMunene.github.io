@@ -1,6 +1,32 @@
 {
-  "lastUpdated": "2025-11-24T01:08:46.430Z",
+  "lastUpdated": "2025-12-01T01:17:22.360Z",
   "repos": [
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-11-27T13:41:59Z"
+    },
+    {
+      "name": "kioart",
+      "html_url": "https://github.com/FredMunene/kioart",
+      "homepage": "https://kyoart.vercel.app",
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-11-27T10:10:22Z"
+    },
+    {
+      "name": "FredMunene",
+      "html_url": "https://github.com/FredMunene/FredMunene",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-11-25T19:38:40Z"
+    },
     {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
@@ -26,16 +52,6 @@
       "topics": [],
       "description": "PolkaShield is a resilient, tamper-proof access-control layer for Web2 applications.   It stores roles, permissions, and audit logs on a Polkadot-based custom blockchain.  Users authenticate with wallet signatures.   Web2 apps verify access via a simple REST API.",
       "updated_at": "2025-11-17T23:31:42Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-11-17T01:05:51Z"
     },
     {
       "name": "eth-safari_2.0",
@@ -89,14 +105,6 @@
       ],
       "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
       "updated_at": "2025-10-30T07:25:51Z"
-    },
-    {
-      "name": "FredMunene",
-      "html_url": "https://github.com/FredMunene/FredMunene",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-10-28T13:07:32Z"
     },
     {
       "name": "legstrong",
