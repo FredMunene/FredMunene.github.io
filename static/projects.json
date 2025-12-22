@@ -1,6 +1,26 @@
 {
-  "lastUpdated": "2025-12-15T01:10:35.489Z",
+  "lastUpdated": "2025-12-22T01:11:57.947Z",
   "repos": [
+    {
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.xyz",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
+      "updated_at": "2025-12-18T12:22:54Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-12-15T01:10:39Z"
+    },
     {
       "name": "chaplainy",
       "html_url": "https://github.com/FredMunene/chaplainy",
@@ -36,26 +56,6 @@
       ],
       "description": "A proof-first marketplace for African artists: upload once, verify, register IP, and list (fixed/auction) with clear rights and payouts. Integrations required by tracks: Coinbase CDP (embedded wallets), Story (IP registration), Yakoa (authenticity), Pinata/IPFS (storage), Supabase (data).",
       "updated_at": "2025-12-09T19:59:57Z"
-    },
-    {
-      "name": "topizzy",
-      "html_url": "https://github.com/FredMunene/topizzy",
-      "homepage": "https://topizzy.xyz",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2025-12-09T12:21:40Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-12-08T01:06:39Z"
     },
     {
       "name": "FredMunene",
