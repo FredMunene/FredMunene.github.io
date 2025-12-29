@@ -1,6 +1,14 @@
 {
-  "lastUpdated": "2025-12-22T01:11:57.947Z",
+  "lastUpdated": "2025-12-29T01:14:37.177Z",
   "repos": [
+    {
+      "name": "chaplainy",
+      "html_url": "https://github.com/FredMunene/chaplainy",
+      "homepage": "https://chaplainy.vercel.app",
+      "topics": [],
+      "description": null,
+      "updated_at": "2025-12-28T10:49:48Z"
+    },
     {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
@@ -9,7 +17,7 @@
         "blockchain"
       ],
       "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2025-12-18T12:22:54Z"
+      "updated_at": "2025-12-28T10:35:43Z"
     },
     {
       "name": "FredMunene.github.io",
@@ -19,15 +27,7 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2025-12-15T01:10:39Z"
-    },
-    {
-      "name": "chaplainy",
-      "html_url": "https://github.com/FredMunene/chaplainy",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-12-12T11:37:15Z"
+      "updated_at": "2025-12-22T01:12:02Z"
     },
     {
       "name": "octant-mini",
