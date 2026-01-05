@@ -1,13 +1,31 @@
 {
-  "lastUpdated": "2025-12-29T01:14:37.177Z",
+  "lastUpdated": "2026-01-05T01:16:38.770Z",
   "repos": [
+    {
+      "name": "yieldRelay",
+      "html_url": "https://github.com/FredMunene/yieldRelay",
+      "homepage": "https://yieldrelay.vercel.app",
+      "topics": [],
+      "description": "YieldRelay is a RealFi-native yield router on Mantle that turns preserved capital into recurring funding by directing only generated yield to compliant, allowlisted beneficiaries.",
+      "updated_at": "2026-01-04T21:20:59Z"
+    },
     {
       "name": "chaplainy",
       "html_url": "https://github.com/FredMunene/chaplainy",
       "homepage": "https://chaplainy.vercel.app",
       "topics": [],
-      "description": null,
-      "updated_at": "2025-12-28T10:49:48Z"
+      "description": "Kahoot on blockchain. ",
+      "updated_at": "2025-12-29T18:08:18Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2025-12-29T01:14:41Z"
     },
     {
       "name": "topizzy",
@@ -18,16 +36,6 @@
       ],
       "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
       "updated_at": "2025-12-28T10:35:43Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2025-12-22T01:12:02Z"
     },
     {
       "name": "octant-mini",
