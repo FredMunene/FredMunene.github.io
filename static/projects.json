@@ -1,21 +1,29 @@
 {
-  "lastUpdated": "2026-01-05T01:16:38.770Z",
+  "lastUpdated": "2026-01-12T01:14:12.272Z",
   "repos": [
+    {
+      "name": "Papaya",
+      "html_url": "https://github.com/FredMunene/Papaya",
+      "homepage": null,
+      "topics": [],
+      "description": "Papaya is a DeFi protocol for lending and borrowing on the XRP Ledger. Specifically designed for stablecoins and CBDCs, Papaya enables users to earn interest on deposits or borrow against collateral",
+      "updated_at": "2026-01-09T14:29:11Z"
+    },
     {
       "name": "yieldRelay",
       "html_url": "https://github.com/FredMunene/yieldRelay",
       "homepage": "https://yieldrelay.vercel.app",
       "topics": [],
       "description": "YieldRelay is a RealFi-native yield router on Mantle that turns preserved capital into recurring funding by directing only generated yield to compliant, allowlisted beneficiaries.",
-      "updated_at": "2026-01-04T21:20:59Z"
+      "updated_at": "2026-01-07T13:41:50Z"
     },
     {
-      "name": "chaplainy",
-      "html_url": "https://github.com/FredMunene/chaplainy",
-      "homepage": "https://chaplainy.vercel.app",
+      "name": "go-reloaded",
+      "html_url": "https://github.com/FredMunene/go-reloaded",
+      "homepage": "",
       "topics": [],
-      "description": "Kahoot on blockchain. ",
-      "updated_at": "2025-12-29T18:08:18Z"
+      "description": "A simple, user-friendly tool designed to complete, edit, and auto-correct text in a file",
+      "updated_at": "2026-01-06T15:06:11Z"
     },
     {
       "name": "FredMunene.github.io",
@@ -25,7 +33,15 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2025-12-29T01:14:41Z"
+      "updated_at": "2026-01-05T01:16:42Z"
+    },
+    {
+      "name": "chaplainy",
+      "html_url": "https://github.com/FredMunene/chaplainy",
+      "homepage": "https://chaplainy.vercel.app",
+      "topics": [],
+      "description": "Kahoot on blockchain. ",
+      "updated_at": "2025-12-29T18:08:18Z"
     },
     {
       "name": "topizzy",
@@ -202,14 +218,6 @@
       ],
       "description": "A utility program that transforms images into grayscale and ASCII art, saving the processed grayscale image and the ASCII art output as separate files for visual and text-based representation.",
       "updated_at": "2025-09-23T11:05:21Z"
-    },
-    {
-      "name": "go-reloaded",
-      "html_url": "https://github.com/FredMunene/go-reloaded",
-      "homepage": "",
-      "topics": [],
-      "description": "A simple, user-friendly tool designed to complete, edit, and auto-correct text in a file",
-      "updated_at": "2025-09-23T11:03:27Z"
     },
     {
       "name": "cartesi_dapp",
