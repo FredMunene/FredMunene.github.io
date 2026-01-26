@@ -1,13 +1,15 @@
 {
-  "lastUpdated": "2026-01-19T01:15:33.803Z",
+  "lastUpdated": "2026-01-26T01:17:29.837Z",
   "repos": [
     {
-      "name": "sollaz",
-      "html_url": "https://github.com/FredMunene/sollaz",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2026-01-12T19:37:48Z"
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.xyz",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
+      "updated_at": "2026-01-23T12:27:52Z"
     },
     {
       "name": "FredMunene.github.io",
@@ -17,7 +19,15 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2026-01-12T01:14:16Z"
+      "updated_at": "2026-01-19T01:15:38Z"
+    },
+    {
+      "name": "sollaz",
+      "html_url": "https://github.com/FredMunene/sollaz",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2026-01-12T19:37:48Z"
     },
     {
       "name": "Papaya",
@@ -50,16 +60,6 @@
       "topics": [],
       "description": "Kahoot on blockchain. ",
       "updated_at": "2025-12-29T18:08:18Z"
-    },
-    {
-      "name": "topizzy",
-      "html_url": "https://github.com/FredMunene/topizzy",
-      "homepage": "https://topizzy.xyz",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2025-12-28T10:35:43Z"
     },
     {
       "name": "octant-mini",
