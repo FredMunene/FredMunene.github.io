@@ -1,15 +1,29 @@
 {
-  "lastUpdated": "2026-01-26T01:17:29.837Z",
+  "lastUpdated": "2026-02-02T01:26:15.225Z",
   "repos": [
     {
-      "name": "topizzy",
-      "html_url": "https://github.com/FredMunene/topizzy",
-      "homepage": "https://topizzy.xyz",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2026-01-23T12:27:52Z"
+      "name": "nawe-site",
+      "html_url": "https://github.com/FredMunene/nawe-site",
+      "homepage": "https://nawewellness.vercel.app",
+      "topics": [],
+      "description": null,
+      "updated_at": "2026-01-30T10:54:41Z"
+    },
+    {
+      "name": "chaplainy",
+      "html_url": "https://github.com/FredMunene/chaplainy",
+      "homepage": "https://chaplainy.vercel.app",
+      "topics": [],
+      "description": "Kahoot on blockchain. ",
+      "updated_at": "2026-01-29T12:36:23Z"
+    },
+    {
+      "name": "uniswap-hook-incubator-8",
+      "html_url": "https://github.com/FredMunene/uniswap-hook-incubator-8",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2026-01-28T07:55:39Z"
     },
     {
       "name": "FredMunene.github.io",
@@ -19,7 +33,17 @@
         "portfolio-site"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2026-01-19T01:15:38Z"
+      "updated_at": "2026-01-26T01:17:33Z"
+    },
+    {
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.xyz",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
+      "updated_at": "2026-01-23T12:27:52Z"
     },
     {
       "name": "sollaz",
@@ -52,14 +76,6 @@
       "topics": [],
       "description": "A simple, user-friendly tool designed to complete, edit, and auto-correct text in a file",
       "updated_at": "2026-01-06T15:06:11Z"
-    },
-    {
-      "name": "chaplainy",
-      "html_url": "https://github.com/FredMunene/chaplainy",
-      "homepage": "https://chaplainy.vercel.app",
-      "topics": [],
-      "description": "Kahoot on blockchain. ",
-      "updated_at": "2025-12-29T18:08:18Z"
     },
     {
       "name": "octant-mini",
