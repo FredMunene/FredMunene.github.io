@@ -1,6 +1,34 @@
 {
-  "lastUpdated": "2026-02-02T01:26:15.225Z",
+  "lastUpdated": "2026-02-09T01:28:06.948Z",
   "repos": [
+    {
+      "name": "Piro",
+      "html_url": "https://github.com/FredMunene/Piro",
+      "homepage": "https://piro-ten.vercel.app",
+      "topics": [
+        "blockchain"
+      ],
+      "description": "Prediction-Informed Router (Piro)  is a Uniswap v4 dynamic-fee hook deployed on Arbitrum Sepolia that adjusts swap fees — and blocks swaps entirely — based on live prediction market risk signals.",
+      "updated_at": "2026-02-08T17:04:32Z"
+    },
+    {
+      "name": "uniswap-hook-incubator-8",
+      "html_url": "https://github.com/FredMunene/uniswap-hook-incubator-8",
+      "homepage": null,
+      "topics": [],
+      "description": null,
+      "updated_at": "2026-02-07T15:39:59Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://fredmunene.github.io/",
+      "topics": [
+        "portfolio-site"
+      ],
+      "description": "Personal Portfolio Website",
+      "updated_at": "2026-02-02T01:26:19Z"
+    },
     {
       "name": "nawe-site",
       "html_url": "https://github.com/FredMunene/nawe-site",
@@ -18,24 +46,6 @@
       "updated_at": "2026-01-29T12:36:23Z"
     },
     {
-      "name": "uniswap-hook-incubator-8",
-      "html_url": "https://github.com/FredMunene/uniswap-hook-incubator-8",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2026-01-28T07:55:39Z"
-    },
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://fredmunene.github.io/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "Personal Portfolio Website",
-      "updated_at": "2026-01-26T01:17:33Z"
-    },
-    {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
       "homepage": "https://topizzy.xyz",
@@ -44,14 +54,6 @@
       ],
       "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
       "updated_at": "2026-01-23T12:27:52Z"
-    },
-    {
-      "name": "sollaz",
-      "html_url": "https://github.com/FredMunene/sollaz",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2026-01-12T19:37:48Z"
     },
     {
       "name": "Papaya",
