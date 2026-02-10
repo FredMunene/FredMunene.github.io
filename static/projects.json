@@ -1,526 +1,60 @@
 {
-  "lastUpdated": "2026-02-09T01:28:06.948Z",
+  "lastUpdated": "2026-02-10T13:12:55.640Z",
   "repos": [
     {
-      "name": "Piro",
-      "html_url": "https://github.com/FredMunene/Piro",
-      "homepage": "https://piro-ten.vercel.app",
+      "name": "topizzy",
+      "html_url": "https://github.com/FredMunene/topizzy",
+      "homepage": "https://topizzy.xyz",
       "topics": [
-        "blockchain"
+        "blockchain",
+        "project"
       ],
-      "description": "Prediction-Informed Router (Piro)  is a Uniswap v4 dynamic-fee hook deployed on Arbitrum Sepolia that adjusts swap fees — and blocks swaps entirely — based on live prediction market risk signals.",
-      "updated_at": "2026-02-08T17:04:32Z"
+      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
+      "updated_at": "2026-02-10T12:36:22Z"
     },
     {
-      "name": "uniswap-hook-incubator-8",
-      "html_url": "https://github.com/FredMunene/uniswap-hook-incubator-8",
+      "name": "polkaShield",
+      "html_url": "https://github.com/FredMunene/polkaShield",
       "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2026-02-07T15:39:59Z"
+      "topics": [
+        "blockchain",
+        "project"
+      ],
+      "description": "PolkaShield is a resilient, tamper-proof access-control layer for Web2 applications.   It stores roles, permissions, and audit logs on a Polkadot-based custom blockchain.  Users authenticate with wallet signatures.   Web2 apps verify access via a simple REST API.",
+      "updated_at": "2026-02-10T12:20:53Z"
+    },
+    {
+      "name": "yieldRelay",
+      "html_url": "https://github.com/FredMunene/yieldRelay",
+      "homepage": "https://yieldrelay.vercel.app",
+      "topics": [
+        "blockchain",
+        "project"
+      ],
+      "description": "YieldRelay is a RealFi-native yield router on Mantle that turns preserved capital into recurring funding by directing only generated yield to compliant, allowlisted beneficiaries.",
+      "updated_at": "2026-02-10T12:02:32Z"
     },
     {
       "name": "FredMunene.github.io",
       "html_url": "https://github.com/FredMunene/FredMunene.github.io",
       "homepage": "https://fredmunene.github.io/",
       "topics": [
-        "portfolio-site"
+        "portfolio-site",
+        "project"
       ],
       "description": "Personal Portfolio Website",
-      "updated_at": "2026-02-02T01:26:19Z"
+      "updated_at": "2026-02-10T11:46:00Z"
     },
     {
-      "name": "nawe-site",
-      "html_url": "https://github.com/FredMunene/nawe-site",
-      "homepage": "https://nawewellness.vercel.app",
-      "topics": [],
-      "description": null,
-      "updated_at": "2026-01-30T10:54:41Z"
-    },
-    {
-      "name": "chaplainy",
-      "html_url": "https://github.com/FredMunene/chaplainy",
-      "homepage": "https://chaplainy.vercel.app",
-      "topics": [],
-      "description": "Kahoot on blockchain. ",
-      "updated_at": "2026-01-29T12:36:23Z"
-    },
-    {
-      "name": "topizzy",
-      "html_url": "https://github.com/FredMunene/topizzy",
-      "homepage": "https://topizzy.xyz",
+      "name": "Teesti",
+      "html_url": "https://teesti.org",
+      "homepage": "https://teesti.org",
       "topics": [
-        "blockchain"
+        "portfolio-site",
+        "project"
       ],
-      "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2026-01-23T12:27:52Z"
-    },
-    {
-      "name": "Papaya",
-      "html_url": "https://github.com/FredMunene/Papaya",
-      "homepage": null,
-      "topics": [],
-      "description": "Papaya is a DeFi protocol for lending and borrowing on the XRP Ledger. Specifically designed for stablecoins and CBDCs, Papaya enables users to earn interest on deposits or borrow against collateral",
-      "updated_at": "2026-01-09T14:29:11Z"
-    },
-    {
-      "name": "yieldRelay",
-      "html_url": "https://github.com/FredMunene/yieldRelay",
-      "homepage": "https://yieldrelay.vercel.app",
-      "topics": [],
-      "description": "YieldRelay is a RealFi-native yield router on Mantle that turns preserved capital into recurring funding by directing only generated yield to compliant, allowlisted beneficiaries.",
-      "updated_at": "2026-01-07T13:41:50Z"
-    },
-    {
-      "name": "go-reloaded",
-      "html_url": "https://github.com/FredMunene/go-reloaded",
-      "homepage": "",
-      "topics": [],
-      "description": "A simple, user-friendly tool designed to complete, edit, and auto-correct text in a file",
-      "updated_at": "2026-01-06T15:06:11Z"
-    },
-    {
-      "name": "octant-mini",
-      "html_url": "https://github.com/FredMunene/octant-mini",
-      "homepage": "https://octant-mini-two.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A simple, plug-and-play tool that lets communities generate yield from idle treasury funds and automatically route that yield to grants, builders, and ecosystem projects; all without touching the principal or relying on constant governance votes. Built on top of Aave’s yield protocol, it provides a hands-off, transparent, and programmable funding ",
-      "updated_at": "2025-12-11T13:38:32Z"
-    },
-    {
-      "name": "eth-safari_2.0",
-      "html_url": "https://github.com/FredMunene/eth-safari_2.0",
-      "homepage": "https://eth-safari-2-0.vercel.app",
-      "topics": [],
-      "description": "Web-based operations hub for the ETH Safari hackathon. It lets organizers issue travel approvals, scan on-site check-ins, track stipend payouts, and give participants a self-serve onboarding portal. Every critical action can be anchored to Aqua Protocol attestations for verifiable audit trails.",
-      "updated_at": "2025-12-11T13:34:11Z"
-    },
-    {
-      "name": "kioart",
-      "html_url": "https://github.com/FredMunene/kioart",
-      "homepage": "https://kyoart.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A proof-first marketplace for African artists: upload once, verify, register IP, and list (fixed/auction) with clear rights and payouts. Integrations required by tracks: Coinbase CDP (embedded wallets), Story (IP registration), Yakoa (authenticity), Pinata/IPFS (storage), Supabase (data).",
-      "updated_at": "2025-12-09T19:59:57Z"
-    },
-    {
-      "name": "FredMunene",
-      "html_url": "https://github.com/FredMunene/FredMunene",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-11-25T19:38:40Z"
-    },
-    {
-      "name": "RunAM",
-      "html_url": "https://github.com/FredMunene/RunAM",
-      "homepage": "https://replit.com/@BeulahObadiah/RunAM",
-      "topics": [],
-      "description": "A P2P parcel delivery marketplace for Nigeria. Match inter-city travelers with empty luggage to senders. UI demo with Hedera NFT receipts.",
-      "updated_at": "2025-11-21T11:35:04Z"
-    },
-    {
-      "name": "polkaShield",
-      "html_url": "https://github.com/FredMunene/polkaShield",
-      "homepage": null,
-      "topics": [],
-      "description": "PolkaShield is a resilient, tamper-proof access-control layer for Web2 applications.   It stores roles, permissions, and audit logs on a Polkadot-based custom blockchain.  Users authenticate with wallet signatures.   Web2 apps verify access via a simple REST API.",
-      "updated_at": "2025-11-17T23:31:42Z"
-    },
-    {
-      "name": "aquafier-js",
-      "html_url": "https://github.com/FredMunene/aquafier-js",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-11-11T13:03:51Z"
-    },
-    {
-      "name": "railway",
-      "html_url": "https://github.com/FredMunene/railway",
-      "homepage": "",
-      "topics": [
-        "blockchain",
-        "defi"
-      ],
-      "description": "Railway is a production-shaped fiat-to-crypto minting slice that pairs upgradeable Solidity contracts with a Go API to accept HMAC-signed mint intents, enforce compliance via a user registry, execute mints through a retrying webhook pipeline, and expose observability via Prometheus/Grafana.",
-      "updated_at": "2025-11-05T07:16:31Z"
-    },
-    {
-      "name": "conxx",
-      "html_url": "https://github.com/FredMunene/conxx",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2025-10-30T07:31:42Z"
-    },
-    {
-      "name": "Oncure",
-      "html_url": "https://github.com/FredMunene/Oncure",
-      "homepage": "https://oncare-nine.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A social support network for cancer patients, survivors, caregivers, and health coaches onCare blends community connection, mentorship, and blockchain-powered rewards (via Hedera) to create a safe, stigma-free, and motivating environment for healing and resilience.",
-      "updated_at": "2025-10-30T07:25:51Z"
-    },
-    {
-      "name": "legstrong",
-      "html_url": "https://github.com/FredMunene/legstrong",
-      "homepage": "https://legstrong.vercel.app",
-      "topics": [],
-      "description": "An interactive space habitat design tool for students and professionals, combining AI-powered component generation with real-time 3D visualization and NASA guideline validation",
-      "updated_at": "2025-10-27T16:40:59Z"
-    },
-    {
-      "name": "graphql",
-      "html_url": "https://github.com/FredMunene/graphql",
-      "homepage": "https://fredmunene.github.io/graphql/",
-      "topics": [
-        "skillset",
-        "technology"
-      ],
-      "description": "A secure, data-driven profile page built with GraphQL and JWT authentication. It allows Zone01 users to log in safely, fetch personalized data, and view their statistics visualized through interactive SVG charts.",
-      "updated_at": "2025-10-14T09:46:27Z"
-    },
-    {
-      "name": "campus_student_course-lecturer_review_analysis",
-      "html_url": "https://github.com/FredMunene/campus_student_course-lecturer_review_analysis",
-      "homepage": null,
-      "topics": [],
-      "description": "An end-to-end Python toolkit that cleans student survey data, standardizes lecturer/course names, computes sentiment and satisfaction scores, and produces exportable reports (PDF/Word) and visual dashboards.",
-      "updated_at": "2025-09-25T16:01:40Z"
-    },
-    {
-      "name": "ETHiopia-Builder-Journal",
-      "html_url": "https://github.com/FredMunene/ETHiopia-Builder-Journal",
-      "homepage": "https://fredmunene.github.io/ETHiopia-Builder-Journal/",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "A personal blog documenting my experience during the Ethiopia Builder Residency, where I explored innovative solutions, collaborated with fellow builders, and reflected on challenges and learnings from the program.",
-      "updated_at": "2025-09-23T11:17:36Z"
-    },
-    {
-      "name": "system_monitor",
-      "html_url": "https://github.com/FredMunene/system_monitor",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A desktop system monitor built in Rust using Dear ImGui for the user interface. This application displays live information on CPU, memory, processes, thermal state, fan performance, and network activity by leveraging the Linux /proc filesystem.",
-      "updated_at": "2025-09-23T11:12:41Z"
-    },
-    {
-      "name": "formy",
-      "html_url": "https://github.com/FredMunene/formy",
-      "homepage": "",
-      "topics": [
-        "social"
-      ],
-      "description": "Formy is an innovative solution designed to streamline the judging process for form-based challenges and competitions. It eliminates the manual work involved in reviewing submissions and recording judge feedback.",
-      "updated_at": "2025-09-23T11:12:01Z"
-    },
-    {
-      "name": "moviebarn",
-      "html_url": "https://github.com/FredMunene/moviebarn",
-      "homepage": "",
-      "topics": [
-        "social"
-      ],
-      "description": "A movie/TV discovery web app that allows users to search and explore detailed information on entertainment content using TMDB and OMDB APIs. Users can manage personal watchlists, discover trending and recommended titles, and filter content by genre and popularity.",
-      "updated_at": "2025-09-23T11:11:28Z"
-    },
-    {
-      "name": "imageConvertor",
-      "html_url": "https://github.com/FredMunene/imageConvertor",
-      "homepage": "https://asciiartpicasso.onrender.com",
-      "topics": [
-        "social"
-      ],
-      "description": "A utility program that transforms images into grayscale and ASCII art, saving the processed grayscale image and the ASCII art output as separate files for visual and text-based representation.",
-      "updated_at": "2025-09-23T11:05:21Z"
-    },
-    {
-      "name": "cartesi_dapp",
-      "html_url": "https://github.com/FredMunene/cartesi_dapp",
-      "homepage": "",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A minimalist spin up of a dapp on Cartesi",
-      "updated_at": "2025-09-23T11:00:05Z"
-    },
-    {
-      "name": "cryptopals_crypto_challenges",
-      "html_url": "https://github.com/FredMunene/cryptopals_crypto_challenges",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "This project is focused on applying Go (Golang) to solve mathematical problems, particularly in the context of cryptography, number theory, and algorithmic computation.",
-      "updated_at": "2025-09-23T10:55:32Z"
-    },
-    {
-      "name": "colors-and-moodboard",
-      "html_url": "https://github.com/FredMunene/colors-and-moodboard",
-      "homepage": "",
-      "topics": [
-        "ui-design"
-      ],
-      "description": "UI design and prototyping exercise focused on applying consistency principles, atomic design methodology, and a structured style guide to create a fully realized, high-fidelity interface.",
-      "updated_at": "2025-09-23T10:34:43Z"
-    },
-    {
-      "name": "atomic-design",
-      "html_url": "https://github.com/FredMunene/atomic-design",
-      "homepage": "",
-      "topics": [
-        "ui-design"
-      ],
-      "description": "UI design and prototyping exercise focused on applying consistency principles, atomic design methodology, and a structured style guide to create a fully realized, high-fidelity interface.",
-      "updated_at": "2025-09-23T10:34:11Z"
-    },
-    {
-      "name": "rules",
-      "html_url": "https://github.com/FredMunene/rules",
-      "homepage": "",
-      "topics": [
-        "ui-design"
-      ],
-      "description": "UI design and prototyping exercise focused on applying consistency principles, atomic design methodology, and a structured style guide to create a fully realized, high-fidelity interface.",
-      "updated_at": "2025-09-23T10:33:48Z"
-    },
-    {
-      "name": "building-an-interface",
-      "html_url": "https://github.com/FredMunene/building-an-interface",
-      "homepage": "",
-      "topics": [
-        "ui-design"
-      ],
-      "description": "UI design and prototyping exercise focused on applying consistency principles, atomic design methodology, and a structured style guide to create a fully realized, high-fidelity interface.",
-      "updated_at": "2025-09-23T10:33:17Z"
-    },
-    {
-      "name": "chatbox",
-      "html_url": "https://github.com/FredMunene/chatbox",
-      "homepage": "",
-      "topics": [
-        "social"
-      ],
-      "description": "A web forum that allows users to communicate, share posts, comment, and interact with one another through likes/dislikes, filtering, and more.",
-      "updated_at": "2025-09-23T10:30:37Z"
-    },
-    {
-      "name": "ens-asset-sender",
-      "html_url": "https://github.com/FredMunene/ens-asset-sender",
-      "homepage": "https://ens-asset-sender.onrender.com/",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "ENS Asset Sender is a lightweight backend service that enables seamless transfers of ETH and tokens to Ethereum Name Service (ENS) names, Base names, or standard Ethereum wallet addresses.",
-      "updated_at": "2025-09-23T10:25:48Z"
-    },
-    {
-      "name": "learn_JS",
-      "html_url": "https://github.com/FredMunene/learn_JS",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A curated collection of materials designed to assist learners at various stages of their journey with the Javascript programming language, focusing on blockchain development.",
-      "updated_at": "2025-09-23T10:21:56Z"
-    },
-    {
-      "name": "learn_c",
-      "html_url": "https://github.com/FredMunene/learn_c",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A curated collection of materials designed to assist learners at various stages of their journey with the Cprogramming language, focusing on blockchain development.",
-      "updated_at": "2025-09-23T10:21:28Z"
-    },
-    {
-      "name": "learn_solidity",
-      "html_url": "https://github.com/FredMunene/learn_solidity",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A curated collection of materials designed to assist learners at various stages of their journey with the Solidity programming language, focusing on blockchain development.",
-      "updated_at": "2025-09-23T10:21:00Z"
-    },
-    {
-      "name": "learn_rust",
-      "html_url": "https://github.com/FredMunene/learn_rust",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A curated collection of materials designed to assist learners at various stages of their journey with the Rust programming language, focusing on blockchain development.",
-      "updated_at": "2025-09-23T10:20:19Z"
-    },
-    {
-      "name": "litterFreeKenya",
-      "html_url": "https://github.com/FredMunene/litterFreeKenya",
-      "homepage": "https://v0-nature-inspired-landing-page.vercel.app",
-      "topics": [
-        "portfolio-site"
-      ],
-      "description": "LitterFreeKenya is a conservation-focused website dedicated to protecting natural habitats, safeguarding endangered species, and promoting sustainability through education, community involvement, and environmental advocacy.",
-      "updated_at": "2025-09-23T10:09:11Z"
-    },
-    {
-      "name": "Imara-Platform",
-      "html_url": "https://github.com/FredMunene/Imara-Platform",
-      "homepage": "https://www.imarahub.xyz",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "IMARA is a blockchain-native collaboration platform that uses staking as a commitment mechanism to connect serious builders worldwide, ensuring that only dedicated and accountable contributors participate in projects.",
-      "updated_at": "2025-09-23T10:08:21Z"
-    },
-    {
-      "name": "system_monitoring",
-      "html_url": "https://github.com/FredMunene/system_monitoring",
-      "homepage": "",
-      "topics": [],
-      "description": "A desktop system monitor built in C++ using Dear ImGui for the user interface. This application displays live information on CPU, memory, processes, thermal state, fan performance, and network activity by leveraging the Linux /proc filesystem.",
-      "updated_at": "2025-09-23T10:06:35Z"
-    },
-    {
-      "name": "learning_kubernetes",
-      "html_url": "https://github.com/FredMunene/learning_kubernetes",
-      "homepage": "",
-      "topics": [
-        "skillset"
-      ],
-      "description": "A reference for commonly used Kubernetes commands, including how to work with Minikube and kubectl.",
-      "updated_at": "2025-09-23T09:41:54Z"
-    },
-    {
-      "name": "chetupamoja",
-      "html_url": "https://github.com/FredMunene/chetupamoja",
-      "homepage": "https://www.chetupamoja.co.ke/",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "ChetuPamoja is a simple, secure crypto donation platform designed for Kenyan organizations. It works alongside existing channels like MPESA, making it easy for organizations to accept crypto without technical barriers.",
-      "updated_at": "2025-09-23T09:23:13Z"
-    },
-    {
-      "name": "taskup",
-      "html_url": "https://github.com/FredMunene/taskup",
-      "homepage": "",
-      "topics": [
-        "blockchain",
-        "productivity-app",
-        "social-app"
-      ],
-      "description": "A token-rewarded accountability app built on Base Minikit that helps users complete tasks through buddy verification and social incentives. Users can optionally stake money to double their token rewards, creating stronger commitment mechanisms.",
-      "updated_at": "2025-09-23T09:18:26Z"
-    },
-    {
-      "name": "eauti",
-      "html_url": "https://github.com/FredMunene/eauti",
-      "homepage": "https://eauti.vercel.app",
-      "topics": [
-        "blockchain",
-        "social-apps"
-      ],
-      "description": "A content subscription platform that enables creators to monetize their work directly through on-chain crypto payments. It ensures that creators receive the full value of their content, eliminating intermediaries, high fees, and delayed payouts.",
-      "updated_at": "2025-09-23T09:15:39Z"
-    },
-    {
-      "name": "linkedIn-bot",
-      "html_url": "https://github.com/FredMunene/linkedIn-bot",
-      "homepage": "",
-      "topics": [
-        "generative-ai"
-      ],
-      "description": "A Go-based LinkedIn automation bot that allows you to post text updates, articles, and images to LinkedIn using the LinkedIn API.",
-      "updated_at": "2025-09-23T09:04:41Z"
-    },
-    {
-      "name": "winzzers",
-      "html_url": "https://github.com/FredMunene/winzzers",
-      "homepage": "https://winzzers.vercel.app",
-      "topics": [
-        "blockchain"
-      ],
-      "description": "A trustless peer-to-peer (P2P) sports betting platform enabling users to directly create and accept sports bets with one another, without intermediaries. All bets are executed and settled via secure smart contracts, ensuring transparency, fairness, and instant payouts on-chain.",
-      "updated_at": "2025-09-23T08:44:22Z"
-    },
-    {
-      "name": "missionaries",
-      "html_url": "https://github.com/FredMunene/missionaries",
-      "homepage": "https://ethereum-10yrs-kisumu.netlify.app/",
-      "topics": [
-        "social"
-      ],
-      "description": "A React-based web app that lets attendees of the Ethereum@10 Kisumu event (July 30, 2025) quickly create beautiful, shareable, and print-ready personalized attendance posters. Users enter their name and photo the app applies one of several curated templates, produces a high-resolution poster (PNG/PDF/SVG), and provides download option",
-      "updated_at": "2025-09-23T08:39:38Z"
-    },
-    {
-      "name": "donation_website",
-      "html_url": "https://github.com/FredMunene/donation_website",
-      "homepage": "",
-      "topics": [],
-      "description": "Donation Platform - Project Description  A simple web application that enables anonymous donations to social projects using Mpesa payments, with an administrative dashboard for project management.",
-      "updated_at": "2025-06-20T07:55:47Z"
-    },
-    {
-      "name": "polkadot-kisumu-workshop",
-      "html_url": "https://github.com/FredMunene/polkadot-kisumu-workshop",
-      "homepage": null,
-      "topics": [],
-      "description": "Polkadot + Rust Workshop in Kisumu — exercises submitted via pull requests.",
-      "updated_at": "2025-06-05T18:27:27Z"
-    },
-    {
-      "name": "artistHub",
-      "html_url": "https://github.com/FredMunene/artistHub",
-      "homepage": "",
-      "topics": [],
-      "description": "Groupie Tracker is a web application designed to help music enthusiasts keep track of their favorite artists and bands. ",
-      "updated_at": "2025-05-07T12:41:07Z"
-    },
-    {
-      "name": "labourer",
-      "html_url": "https://github.com/FredMunene/labourer",
-      "homepage": "",
-      "topics": [],
-      "description": "A comprehensive home services platform that lets users effortlessly book a wide range of household services—such as plumbing, wall painting, and deep cleaning—all from a single, easy-to-use website.",
-      "updated_at": "2025-05-07T12:24:30Z"
-    },
-    {
-      "name": "TujiFund",
-      "html_url": "https://github.com/FredMunene/TujiFund",
-      "homepage": "",
-      "topics": [],
-      "description": "The Chama App is designed to provide transparency, financial tracking, and communication for savings groups. https://tujifund-tgci.onrender.com/",
-      "updated_at": "2024-12-15T13:02:40Z"
-    },
-    {
-      "name": "atm-management-system",
-      "html_url": "https://github.com/FredMunene/atm-management-system",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2024-12-10T10:15:11Z"
-    },
-    {
-      "name": "Team-shuffler",
-      "html_url": "https://github.com/FredMunene/Team-shuffler",
-      "homepage": null,
-      "topics": [],
-      "description": null,
-      "updated_at": "2024-11-18T14:19:07Z"
+      "description": "Teesti website.",
+      "updated_at": "2026-02-10T13:12:55.640Z"
     }
   ]
 }

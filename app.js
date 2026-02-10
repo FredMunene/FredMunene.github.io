@@ -40,7 +40,7 @@ app.post("/submit", async(req, res) => {
     try {
         const info = await transporter.sendMail({
             from: `"Fred Munene Gitonga" <mfredgitonga@gmail.com>`,
-            to: `"Mike" mikeburns9990@gmail.com`,
+            to: `"Fred" munenegitonga99@gmail.com`,
             subject: subject,
             text: message,
             html: `<b>${message}</b>`,
