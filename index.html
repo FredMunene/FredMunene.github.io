@@ -1,40 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <!--  -->
     <head>
-        <title>Fred Gitonga  </title>
+        <title>Fred Gitonga | Senior Backend & Blockchain Engineer</title>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Fred Gitonga is a senior engineer focused on distributed infrastructure, backend systems, and DeFi. Explore projects, services, and writing."/>
+        <meta name="author" content="Fred Gitonga"/>
+        <meta name="keywords" content="backend engineer, blockchain, DeFi, distributed systems, Go, Solidity, infrastructure"/>
+        <meta name="robots" content="index,follow"/>
+        <link rel="canonical" href="https://gitongacodes.co.ke/"/>
+        <meta name="theme-color" content="#000000"/>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin>
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="Fred Gitonga"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Fred Gitonga | Senior Backend & Blockchain Engineer"/>
+        <meta property="og:description" content="Senior engineer focused on distributed infrastructure, backend systems, and DeFi. Projects, services, and writing."/>
+        <meta property="og:url" content="https://gitongacodes.co.ke/"/>
+        <meta property="og:image" content="https://gitongacodes.co.ke/static/fred-speaking-aug.jpg"/>
+        <meta property="og:image:alt" content="Fred Gitonga speaking at an event"/>
+        <meta property="og:locale" content="en_US"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@Gitonga2050"/>
+        <meta name="twitter:creator" content="@Gitonga2050"/>
+        <meta name="twitter:title" content="Fred Gitonga | Senior Backend & Blockchain Engineer"/>
+        <meta name="twitter:description" content="Senior engineer focused on distributed infrastructure, backend systems, and DeFi. Projects, services, and writing."/>
+        <meta name="twitter:image" content="https://gitongacodes.co.ke/static/fred-speaking-aug.jpg"/>
         <!-- favicon -->
-        <link  rel="icon" href="static/favicon.ico">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="static/favicon.ico">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <!-- css -->
         <link rel="stylesheet" href="static/style.css" />
         <!-- fonts -->
         <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/calibre" />
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Fred Gitonga",
+          "url": "https://gitongacodes.co.ke/",
+          "image": "https://gitongacodes.co.ke/static/fred-speaking-aug.jpg",
+          "jobTitle": "Senior Backend & Blockchain Engineer",
+          "sameAs": [
+            "https://dev.to/fredgitonga",
+            "https://x.com/Gitonga2050",
+            "https://www.linkedin.com/in/fredgitonga/"
+          ],
+          "knowsAbout": [
+            "Distributed systems",
+            "Backend engineering",
+            "Blockchain",
+            "DeFi",
+            "Go",
+            "Solidity"
+          ]
+        }
+        </script>
     </head>
     <!--  -->
-
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const menuToggle = document.querySelector('.menu-toggle');
-          const navMenu = document.querySelector('.nav-menu');
-          
-          menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-          });
-        
-          // Close menu when clicking outside
-          document.addEventListener('click', function(event) {
-            if (!event.target.closest('.nav-container')) {
-              navMenu.classList.remove('active');
-            }
-          });
-        });
-        </script>
-        </head>
-        <body>
+        <body id="top">
         <div class="nav-container">
           <button class="menu-toggle">
             <svg viewBox="0 0 24 24">
@@ -160,8 +188,6 @@
         
             <!-- Add additional sections for Education, Scholarships, etc., similar to above -->
         
-        </section>
-
         </section>
         <div class="projects-languages-container">
             <!-- projects -->
@@ -302,6 +328,26 @@
                 </div>
             </div>
         </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const menuToggle = document.querySelector('.menu-toggle');
+          const navMenu = document.querySelector('.nav-menu');
+
+          if (!menuToggle || !navMenu) return;
+
+          menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-container')) {
+              navMenu.classList.remove('active');
+            }
+          });
+        });
+        </script>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
