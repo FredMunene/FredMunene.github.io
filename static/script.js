@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   setupNavigation();
   setupRevealAnimations();
+  setupContactForm();
   loadProjects();
   loadBlogs();
   loadRecognition();
@@ -50,6 +51,44 @@ function setupRevealAnimations() {
   );
 
   items.forEach((item) => observer.observe(item));
+}
+
+function setupContactForm() {
+  const form = document.querySelector("#contact-form");
+  const status = document.querySelector("[data-form-status]");
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+
+    status.textContent = "Sending...";
+    if (submitButton) submitButton.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission failed");
+      }
+
+      form.reset();
+      status.textContent = "Message sent.";
+    } catch (error) {
+      status.textContent = "Message could not be sent. Use the email address instead.";
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
 }
 
 async function loadProjects() {

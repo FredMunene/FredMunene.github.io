@@ -699,6 +699,12 @@ button {
   gap: 0.9rem;
 }
 
+.form-status {
+  min-height: 1.2rem;
+  font-size: 0.92rem;
+  color: var(--accent);
+}
+
 label {
   display: grid;
   gap: 0.45rem;

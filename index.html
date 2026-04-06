@@ -318,7 +318,7 @@
             </div>
           </article>
 
-          <form class="contact-form reveal" action="https://formspree.io/f/mpqokjky" method="POST">
+          <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mpqokjky" method="POST">
             <label>
               Name
               <input type="text" name="name" placeholder="Your name" required />
@@ -336,6 +336,7 @@
               <textarea name="message" rows="5" placeholder="Describe the opportunity briefly." required></textarea>
             </label>
             <button class="button button-primary" type="submit">Send message</button>
+            <p class="form-status" data-form-status aria-live="polite"></p>
           </form>
         </div>
       </section>
