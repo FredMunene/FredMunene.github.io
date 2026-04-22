@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "launching-the-blog",
+    "title": "Launching the Blog",
+    "description": "How I am adding a Markdown-powered blog to this portfolio.",
+    "date": "2026-04-22",
+    "cover": "/static/blog1.png",
+    "readingTime": 1,
+    "tags": ["portfolio", "markdown", "engineering"],
+    "url": "/blog/launching-the-blog/"
+  },
+  {
+    "slug": "building-with-markdown",
+    "title": "Building with Markdown",
+    "description": "A quick note on the Markdown features I expect to use most often.",
+    "date": "2026-04-10",
+    "cover": "/static/blog2.png",
+    "readingTime": 1,
+    "tags": ["writing", "markdown"],
+    "url": "/blog/building-with-markdown/"
+  }
+]
