@@ -142,7 +142,7 @@ function createLocalCard(post, viewCount = 0) {
 }
 
 function createDevCard(article) {
-  const viewBadge = renderDevViewBadge(article.page_views_count);
+  const viewBadge = renderDevEngagementBadge(article);
   return `
     <a class="blog-index-card blog-card-external" href="${escapeAttribute(article.url)}" target="_blank" rel="noreferrer">
       <div class="blog-index-card-media">
@@ -165,11 +165,22 @@ function createDevCard(article) {
   `;
 }
 
-function renderDevViewBadge(value) {
-  if (value === null || typeof value === "undefined") return "";
-  const count = Number(value);
-  if (!Number.isFinite(count)) return "";
-  return ` <span class="blog-view-count">${formatViewCount(count)}</span>`;
+function renderDevEngagementBadge(article) {
+  const viewCount = Number(article.page_views_count);
+  if (Number.isFinite(viewCount) && viewCount > 0) {
+    return ` <span class="blog-view-count">${formatViewCount(viewCount)}</span>`;
+  }
+
+  const reactionCount = Number(article.public_reactions_count || article.positive_reactions_count);
+  if (!Number.isFinite(reactionCount) || reactionCount <= 0) return "";
+
+  return ` <span class="blog-view-count">${formatReactionCount(reactionCount)}</span>`;
+}
+
+function formatReactionCount(value) {
+  const count = Number(value || 0);
+  const formatter = new Intl.NumberFormat("en-US", { notation: count >= 10000 ? "compact" : "standard" });
+  return `${formatter.format(count)} reaction${count === 1 ? "" : "s"}`;
 }
 
 async function hydrateBlogViewCounts() {

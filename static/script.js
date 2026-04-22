@@ -386,7 +386,7 @@ function createLocalBlogCard(post, href, viewCount = 0) {
 }
 
 function createDevBlogCard(article, href) {
-  const viewBadge = renderDevViewBadge(article.page_views_count);
+  const viewBadge = renderDevEngagementBadge(article);
   return `
     <a class="blog-card blog-card-external" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
       <img src="${escapeAttribute(article.cover_image || "static/blog1.png")}" alt="${escapeAttribute(article.title)}" loading="lazy" />
@@ -403,11 +403,22 @@ function createDevBlogCard(article, href) {
   `;
 }
 
-function renderDevViewBadge(value) {
-  if (value === null || typeof value === "undefined") return "";
-  const count = Number(value);
-  if (!Number.isFinite(count)) return "";
-  return ` <span class="blog-view-count">${formatViewCount(count)}</span>`;
+function renderDevEngagementBadge(article) {
+  const viewCount = Number(article.page_views_count);
+  if (Number.isFinite(viewCount) && viewCount > 0) {
+    return ` <span class="blog-view-count">${formatViewCount(viewCount)}</span>`;
+  }
+
+  const reactionCount = Number(article.public_reactions_count || article.positive_reactions_count);
+  if (!Number.isFinite(reactionCount) || reactionCount <= 0) return "";
+
+  return ` <span class="blog-view-count">${formatReactionCount(reactionCount)}</span>`;
+}
+
+function formatReactionCount(value) {
+  const count = Number(value || 0);
+  const formatter = new Intl.NumberFormat("en-US", { notation: count >= 10000 ? "compact" : "standard" });
+  return `${formatter.format(count)} reaction${count === 1 ? "" : "s"}`;
 }
 
 function titleCase(value) {
