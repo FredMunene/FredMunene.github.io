@@ -4,11 +4,13 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const path = require("path");
+const fs = require("fs/promises");
 const multer = require("multer"); 
 
 
 const app = express();
 const upload = multer();
+const blogViewsPath = path.join(__dirname, "blog", "views.json");
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}))
@@ -21,6 +23,25 @@ app.get("/", (req, res) => {
 
 // Serve static files from the "static" folder
 app.use("/static", express.static("static"));
+app.use("/blog", express.static("blog"));
+
+app.get("/api/blog/views", async (req, res) => {
+  const views = await readBlogViews();
+  res.json(views);
+});
+
+app.post("/api/blog/views/:slug", async (req, res) => {
+  const slug = sanitizeSlug(req.params.slug);
+  if (!slug) {
+    return res.status(400).json({ error: "Invalid slug" });
+  }
+
+  const views = await readBlogViews();
+  views[slug] = Number(views[slug] || 0) + 1;
+  await writeBlogViews(views);
+
+  res.json({ slug, views: views[slug] });
+});
 
 
 const transporter = nodemailer.createTransport({
@@ -53,6 +74,25 @@ app.post("/submit", async(req, res) => {
         res.status(500).send("Failed to send email");
     }
 });
+
+async function readBlogViews() {
+  try {
+    const raw = await fs.readFile(blogViewsPath, "utf8");
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" && !Array.isArray(parsed) ? parsed : {};
+  } catch (error) {
+    return {};
+  }
+}
+
+async function writeBlogViews(views) {
+  await fs.writeFile(blogViewsPath, `${JSON.stringify(views, null, 2)}\n`);
+}
+
+function sanitizeSlug(value) {
+  const slug = String(value || "").trim();
+  return /^[a-z0-9-]+$/i.test(slug) ? slug : "";
+}
 
 const PORT = process.env.PORT || 3000;
 

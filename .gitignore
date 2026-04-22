@@ -4,4 +4,5 @@ node_modules
 vendor/
 _site/
 .codex
+.netlify/
 blog/index.md
