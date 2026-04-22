@@ -199,17 +199,11 @@ async function trackBlogPostView(postPage) {
 }
 
 async function incrementBlogView(slug) {
-  const payload = JSON.stringify({ slug });
-
   for (const endpoint of BLOG_VIEWS_ENDPOINTS) {
     try {
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json"
-        },
-        body: payload
+        body: slug
       });
 
       if (!response.ok) continue;
