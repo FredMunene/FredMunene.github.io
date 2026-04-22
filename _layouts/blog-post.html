@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="{{ '/static/style.css' | relative_url }}" />
+    <script src="{{ '/static/site-config.js' | relative_url }}"></script>
   </head>
   <body class="blog-page">
     <header class="site-header blog-header">
@@ -35,10 +36,13 @@
       <a class="button button-ghost header-cta" href="{{ '/blog/' | relative_url }}">All posts</a>
     </header>
     <main class="section blog-shell">
-      <article class="blog-article">
+      <article class="blog-article" data-blog-post data-blog-slug="{{ page.slug | escape }}">
         <p class="eyebrow">Blog</p>
         <h1>{{ page.title | escape }}</h1>
-        <p class="blog-meta">{{ page.date | date: "%B %-d, %Y" }} · {{ page.readingTime | default: 1 }} min read{% if page.tags %} · {{ page.tags | join: " · " }}{% endif %}</p>
+        <p class="blog-meta">
+          {{ page.date | date: "%B %-d, %Y" }} · {{ page.readingTime | default: 1 }} min read{% if page.tags %} · {{ page.tags | join: " · " }}{% endif %}
+          <span class="blog-view-count" data-blog-view-count>0 views</span>
+        </p>
         {% if page.cover %}
           <div class="blog-post-cover">
             <img src="{{ page.cover | relative_url }}" alt="{{ page.title | escape }}" />
@@ -52,5 +56,6 @@
         </div>
       </article>
     </main>
+    <script src="{{ '/static/blog.js' | relative_url }}?v=20260423-1"></script>
   </body>
 </html>
