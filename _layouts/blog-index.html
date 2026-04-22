@@ -45,7 +45,7 @@
       {% if blog_posts.size > 0 %}
         <div class="blog-index-grid">
           {% for post in blog_posts %}
-            <a class="blog-index-card" href="{{ post.url | relative_url }}" data-blog-slug="{{ post.slug }}">
+            <a class="blog-index-card" href="{{ post.url | relative_url }}" data-blog-slug="{{ post.slug | default: post.title | slugify | escape }}">
               <div class="blog-index-card-media">
                 {% if post.cover %}
                   <img src="{{ post.cover | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
@@ -54,7 +54,7 @@
                 {% endif %}
               </div>
               <div class="blog-index-card-content">
-                <p class="blog-card-meta">{{ post.date | date: "%B %-d, %Y" }} · {{ post.readingTime | default: 1 }} min read <span class="blog-view-count" data-blog-view-count data-blog-slug="{{ post.slug }}">0 views</span></p>
+                <p class="blog-card-meta">{{ post.date | date: "%B %-d, %Y" }} · {{ post.readingTime | default: 1 }} min read <span class="blog-view-count" data-blog-view-count data-blog-slug="{{ post.slug | default: post.title | slugify | escape }}">0 views</span></p>
                 <h2>{{ post.title | escape }}</h2>
                 <p>{{ post.description | escape }}</p>
                 <div class="blog-card-footer">
