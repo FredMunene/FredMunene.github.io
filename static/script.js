@@ -386,12 +386,12 @@ function createLocalBlogCard(post, href, viewCount = 0) {
 }
 
 function createDevBlogCard(article, href) {
-  const viewCount = Number(article.page_views_count || 0);
+  const viewBadge = renderDevViewBadge(article.page_views_count);
   return `
     <a class="blog-card blog-card-external" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
       <img src="${escapeAttribute(article.cover_image || "static/blog1.png")}" alt="${escapeAttribute(article.title)}" loading="lazy" />
       <div class="blog-content">
-        <p class="blog-card-meta">${escapeHtml(formatBlogDate(article))} · Dev.to <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
+        <p class="blog-card-meta">${escapeHtml(formatBlogDate(article))} · Dev.to${viewBadge}</p>
         <h3>${escapeHtml(article.title)}</h3>
         <p>${escapeHtml(article.description || "Read the full article.")}</p>
         <div class="blog-card-footer">
@@ -401,6 +401,13 @@ function createDevBlogCard(article, href) {
       </div>
     </a>
   `;
+}
+
+function renderDevViewBadge(value) {
+  if (value === null || typeof value === "undefined") return "";
+  const count = Number(value);
+  if (!Number.isFinite(count)) return "";
+  return ` <span class="blog-view-count">${formatViewCount(count)}</span>`;
 }
 
 function titleCase(value) {

@@ -142,7 +142,7 @@ function createLocalCard(post, viewCount = 0) {
 }
 
 function createDevCard(article) {
-  const viewCount = Number(article.page_views_count || 0);
+  const viewBadge = renderDevViewBadge(article.page_views_count);
   return `
     <a class="blog-index-card blog-card-external" href="${escapeAttribute(article.url)}" target="_blank" rel="noreferrer">
       <div class="blog-index-card-media">
@@ -153,7 +153,7 @@ function createDevCard(article) {
         }
       </div>
       <div class="blog-index-card-content">
-        <p class="blog-card-meta">${escapeHtml(formatDevDate(article))} · Dev.to <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
+        <p class="blog-card-meta">${escapeHtml(formatDevDate(article))} · Dev.to${viewBadge}</p>
         <h2>${escapeHtml(article.title)}</h2>
         <p>${escapeHtml(article.description || "")}</p>
         <div class="blog-card-footer">
@@ -163,6 +163,13 @@ function createDevCard(article) {
       </div>
     </a>
   `;
+}
+
+function renderDevViewBadge(value) {
+  if (value === null || typeof value === "undefined") return "";
+  const count = Number(value);
+  if (!Number.isFinite(count)) return "";
+  return ` <span class="blog-view-count">${formatViewCount(count)}</span>`;
 }
 
 async function hydrateBlogViewCounts() {
