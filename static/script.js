@@ -217,54 +217,6 @@ function createProjectCard(repo) {
   return card;
 }
 
-async function loadBlogs() {
-  const container = document.querySelector("[data-blog-grid]");
-  const fallback = document.querySelector("[data-blog-fallback]");
-  if (!container) return;
-
-  try {
-    const response = await fetch("https://dev.to/api/articles?username=fredgitonga");
-    if (!response.ok) throw new Error("Failed to load blog posts");
-
-    const articles = await response.json();
-    const latest = Array.isArray(articles) ? articles.slice(0, 4) : [];
-
-    if (!latest.length) {
-      if (fallback) fallback.style.display = "block";
-      return;
-    }
-
-    container.innerHTML = "";
-    latest.forEach((article) => {
-      const card = document.createElement("a");
-      card.className = "blog-card";
-      card.href = article.url;
-      card.target = "_blank";
-      card.rel = "noreferrer";
-
-      const image = document.createElement("img");
-      image.src = article.cover_image || "static/blog1.png";
-      image.alt = article.title;
-      image.loading = "lazy";
-
-      const content = document.createElement("div");
-      content.className = "blog-content";
-
-      const title = document.createElement("h3");
-      title.textContent = article.title;
-
-      const description = document.createElement("p");
-      description.textContent = article.description || "Read the full article.";
-
-      content.append(title, description);
-      card.append(image, content);
-      container.appendChild(card);
-    });
-  } catch (error) {
-    if (fallback) fallback.style.display = "block";
-  }
-}
-
 async function loadRecognition() {
   const talksContainer = document.querySelector("[data-talks]");
   const awardsContainer = document.querySelector("[data-awards]");
@@ -314,9 +266,132 @@ function createRecognitionCard(item) {
   return card;
 }
 
+async function loadBlogs() {
+  const container = document.querySelector("[data-blog-grid]");
+  if (!container) return;
+
+  try {
+    const localPosts = await loadLocalBlogPosts();
+    const localCards = localPosts.slice(0, 2).map((post) => {
+      const href = post.url || `/blog/${post.slug}/`;
+      return createLocalBlogCard(post, href);
+    });
+    const existing = new Set(localPosts.slice(0, 2).map((post) => post.url || `/blog/${post.slug}/`));
+    const devCards = await loadDevBlogCards(existing);
+
+    container.innerHTML = "";
+    container.insertAdjacentHTML("beforeend", devCards.join(""));
+    container.insertAdjacentHTML("beforeend", localCards.join(""));
+  } catch (error) {
+    console.warn("Blog feed failed", error);
+  }
+}
+
+async function loadLocalBlogPosts() {
+  try {
+    const response = await fetch("/blog/posts/index.json");
+    if (!response.ok) throw new Error("Failed to load local posts");
+
+    const posts = await response.json();
+    return Array.isArray(posts) ? posts : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+async function loadDevBlogCards(existing) {
+  try {
+    const response = await fetch("https://dev.to/api/articles?username=fredgitonga&per_page=2", {
+      headers: {
+        Accept: "application/vnd.forem.api-v1+json"
+      }
+    });
+    if (!response.ok) throw new Error("Failed to load dev.to posts");
+
+    const articles = await response.json();
+    const latest = Array.isArray(articles) ? articles.slice(0, 2) : [];
+
+    return latest
+      .filter((article) => article.url && !existing.has(article.url))
+      .map((article) => {
+        existing.add(article.url);
+        return createDevBlogCard(article, article.url);
+      });
+  } catch (error) {
+    console.warn("Dev.to blog feed unavailable", error);
+    return [];
+  }
+}
+
+function createLocalBlogCard(post, href) {
+  const tags = Array.isArray(post.tags) && post.tags.length ? post.tags.join(" · ") : "Blog post";
+
+  return `
+    <a class="blog-card" href="${escapeAttribute(href)}">
+      <img src="${escapeAttribute(post.cover || "static/blog1.png")}" alt="${escapeAttribute(post.title)}" loading="lazy" />
+      <div class="blog-content">
+        <p class="blog-card-meta">${formatDate(post.date)} · ${post.readingTime || 1} min read</p>
+        <h3>${escapeHtml(post.title)}</h3>
+        <p>${escapeHtml(post.description || "Read the full article.")}</p>
+        <div class="blog-card-footer">
+          <span>${escapeHtml(tags)}</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
+function createDevBlogCard(article, href) {
+  return `
+    <a class="blog-card blog-card-external" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
+      <img src="${escapeAttribute(article.cover_image || "static/blog1.png")}" alt="${escapeAttribute(article.title)}" loading="lazy" />
+      <div class="blog-content">
+        <p class="blog-card-meta">${escapeHtml(formatBlogDate(article))} · Dev.to</p>
+        <h3>${escapeHtml(article.title)}</h3>
+        <p>${escapeHtml(article.description || "Read the full article.")}</p>
+        <div class="blog-card-footer">
+          <span>Dev.to</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+  `;
+}
+
 function titleCase(value) {
   return value
     .split(" ")
     .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
+}
+
+function formatDate(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+}
+
+function formatBlogDate(article) {
+  const source = article.published_at || article.readable_publish_date || "";
+  const formatted = formatDate(source);
+  return formatted || article.readable_publish_date || "";
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/`/g, "&#96;");
 }
