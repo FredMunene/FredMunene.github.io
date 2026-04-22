@@ -1,24 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
   setupRevealAnimations();
+  hydrateBlogViewCounts();
   initBlogPage();
 });
 
+const BLOG_VIEWS_ENDPOINT =
+  typeof window !== "undefined" && window.SITE_CONFIG && window.SITE_CONFIG.blogViewsEndpoint
+    ? window.SITE_CONFIG.blogViewsEndpoint
+    : "";
+const BLOG_VIEWS_ENDPOINTS = [
+  BLOG_VIEWS_ENDPOINT,
+  typeof window !== "undefined" && window.BLOG_VIEWS_ENDPOINT ? window.BLOG_VIEWS_ENDPOINT : "",
+  "/.netlify/functions/blog-views",
+  "/api/blog/views"
+].filter(Boolean);
+
 async function initBlogPage() {
   const view = document.querySelector("[data-blog-view]");
-  if (!view) return;
+  if (view) {
+    const posts = await loadLocalPosts();
+    const articleSlug = new URLSearchParams(window.location.search).get("post");
 
-  const posts = await loadLocalPosts();
-  const articleSlug = new URLSearchParams(window.location.search).get("post");
-
-  if (articleSlug) {
-    const post = posts.find((item) => item.slug === articleSlug);
-    if (post) {
-      window.location.replace(post.url || `./${articleSlug}/`);
-      return;
+    if (articleSlug) {
+      const post = posts.find((item) => item.slug === articleSlug);
+      if (post) {
+        window.location.replace(post.url || `./${articleSlug}/`);
+        return;
+      }
     }
+
+    await renderIndex(view, posts);
   }
 
-  renderIndex(view, posts);
+  const postPage = document.querySelector("[data-blog-post]");
+  if (postPage) {
+    await trackBlogPostView(postPage);
+  }
 }
 
 async function loadLocalPosts() {
@@ -32,8 +49,40 @@ async function loadLocalPosts() {
   }
 }
 
-function renderIndex(view, posts) {
-  const localCards = posts.map(createLocalCard).join("");
+async function loadBlogViewCounts() {
+  for (const endpoint of BLOG_VIEWS_ENDPOINTS) {
+    try {
+      const response = await fetch(endpoint, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) continue;
+
+      const views = await response.json();
+      if (views && typeof views === "object" && !Array.isArray(views)) {
+        return views;
+      }
+    } catch (error) {
+      continue;
+    }
+  }
+
+  try {
+    const response = await fetch("/blog/views.json");
+    if (!response.ok) throw new Error("Failed to load blog views");
+
+    const views = await response.json();
+    return views && typeof views === "object" && !Array.isArray(views) ? views : {};
+  } catch (error) {
+    return {};
+  }
+}
+
+async function renderIndex(view, posts) {
+  const viewCounts = await loadBlogViewCounts();
+  const localCards = posts.map((post) => createLocalCard(post, viewCounts[post.slug])).join("");
 
   view.innerHTML = `
     <section class="blog-index-grid">
@@ -56,7 +105,7 @@ async function appendDevtoPosts(view, localPosts) {
 
     const cards = latest
       .filter((article) => article.url && !existing.has(article.url))
-      .map(createDevCard)
+      .map((article) => createDevCard(article))
       .join("");
 
     if (cards) {
@@ -67,7 +116,7 @@ async function appendDevtoPosts(view, localPosts) {
   }
 }
 
-function createLocalCard(post) {
+function createLocalCard(post, viewCount = 0) {
   const tags = Array.isArray(post.tags) && post.tags.length ? post.tags.join(" · ") : "Blog post";
 
   return `
@@ -80,7 +129,7 @@ function createLocalCard(post) {
         }
       </div>
       <div class="blog-index-card-content">
-        <p class="blog-card-meta">${formatDate(post.date)} · ${post.readingTime || 1} min read</p>
+        <p class="blog-card-meta">${formatDate(post.date)} · ${post.readingTime || 1} min read <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
         <h2>${escapeHtml(post.title)}</h2>
         <p>${escapeHtml(post.description || "")}</p>
         <div class="blog-card-footer">
@@ -93,17 +142,18 @@ function createLocalCard(post) {
 }
 
 function createDevCard(article) {
+  const viewCount = Number(article.page_views_count || 0);
   return `
     <a class="blog-index-card blog-card-external" href="${escapeAttribute(article.url)}" target="_blank" rel="noreferrer">
       <div class="blog-index-card-media">
         ${
           article.cover_image
             ? `<img src="${escapeAttribute(article.cover_image)}" alt="${escapeAttribute(article.title)}" loading="lazy" />`
-            : `<div class="blog-index-card-placeholder" aria-hidden="true"></div>`
+          : `<div class="blog-index-card-placeholder" aria-hidden="true"></div>`
         }
       </div>
       <div class="blog-index-card-content">
-        <p class="blog-card-meta">${escapeHtml(formatDevDate(article))} · Dev.to</p>
+        <p class="blog-card-meta">${escapeHtml(formatDevDate(article))} · Dev.to <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
         <h2>${escapeHtml(article.title)}</h2>
         <p>${escapeHtml(article.description || "")}</p>
         <div class="blog-card-footer">
@@ -113,6 +163,73 @@ function createDevCard(article) {
       </div>
     </a>
   `;
+}
+
+async function hydrateBlogViewCounts() {
+  const nodes = document.querySelectorAll("[data-blog-view-count][data-blog-slug]");
+  if (!nodes.length) return;
+
+  const viewCounts = await loadBlogViewCounts();
+  nodes.forEach((node) => {
+    const slug = node.dataset.blogSlug;
+    if (!slug) return;
+    node.textContent = formatViewCount(viewCounts[slug] || 0);
+  });
+}
+
+async function trackBlogPostView(postPage) {
+  const slug = postPage.dataset.blogSlug;
+  const countNode = postPage.querySelector("[data-blog-view-count]");
+  if (!slug || !countNode) return;
+
+  const viewCounts = await loadBlogViewCounts();
+  const currentCount = Number(viewCounts[slug] || 0);
+  countNode.textContent = formatViewCount(currentCount);
+
+  try {
+    const nextCount = await incrementBlogView(slug);
+    if (typeof nextCount !== "number") {
+      return;
+    }
+
+    countNode.textContent = formatViewCount(nextCount);
+  } catch (error) {
+    return;
+  }
+}
+
+async function incrementBlogView(slug) {
+  const payload = JSON.stringify({ slug });
+
+  for (const endpoint of BLOG_VIEWS_ENDPOINTS) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: payload
+      });
+
+      if (!response.ok) continue;
+
+      const result = await response.json();
+      if (result && typeof result.views !== "undefined") {
+        return Number(result.views);
+      }
+    } catch (error) {
+      continue;
+    }
+  }
+
+  return null;
+}
+
+function formatViewCount(value) {
+  const count = Number(value || 0);
+  const formatter = new Intl.NumberFormat("en-US", { notation: count >= 10000 ? "compact" : "standard" });
+  return `${formatter.format(count)} view${count === 1 ? "" : "s"}`;
 }
 
 function renderPost(view, post) {
