@@ -36,7 +36,7 @@
       <a class="button button-ghost header-cta" href="{{ '/blog/' | relative_url }}">All posts</a>
     </header>
     <main class="section blog-shell">
-      <article class="blog-article" data-blog-post data-blog-slug="{{ page.slug | escape }}">
+      <article class="blog-article" data-blog-post data-blog-slug="{{ page.slug | default: page.title | slugify | escape }}">
         <p class="eyebrow">Blog</p>
         <h1>{{ page.title | escape }}</h1>
         <p class="blog-meta">

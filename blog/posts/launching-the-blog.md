@@ -1,6 +1,7 @@
 ---
 layout: blog-post
 title: Launching the Blog
+slug: launching-the-blog
 description: How I am adding a Markdown-powered blog to this portfolio.
 date: 2026-04-22
 cover: /static/blog1.png

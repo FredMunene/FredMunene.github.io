@@ -1,6 +1,7 @@
 ---
 layout: blog-post
 title: Building with Markdown
+slug: building-with-markdown
 description: A quick note on the Markdown features I expect to use most often.
 date: 2026-04-10
 cover: /static/blog2.png
