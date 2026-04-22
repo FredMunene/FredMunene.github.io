@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", () => {
   loadRecognition();
 });
 
+const BLOG_VIEWS_ENDPOINT =
+  typeof window !== "undefined" && window.SITE_CONFIG && window.SITE_CONFIG.blogViewsEndpoint
+    ? window.SITE_CONFIG.blogViewsEndpoint
+    : "";
+const BLOG_VIEWS_ENDPOINTS = [
+  BLOG_VIEWS_ENDPOINT,
+  typeof window !== "undefined" && window.BLOG_VIEWS_ENDPOINT ? window.BLOG_VIEWS_ENDPOINT : "",
+  "/.netlify/functions/blog-views",
+  "/api/blog/views"
+].filter(Boolean);
+
 function setupNavigation() {
   const toggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav]");
@@ -272,9 +283,10 @@ async function loadBlogs() {
 
   try {
     const localPosts = await loadLocalBlogPosts();
+    const viewCounts = await loadBlogViewCounts();
     const localCards = localPosts.slice(0, 2).map((post) => {
       const href = post.url || `/blog/${post.slug}/`;
-      return createLocalBlogCard(post, href);
+      return createLocalBlogCard(post, href, viewCounts[post.slug]);
     });
     const existing = new Set(localPosts.slice(0, 2).map((post) => post.url || `/blog/${post.slug}/`));
     const devCards = await loadDevBlogCards(existing);
@@ -323,14 +335,45 @@ async function loadDevBlogCards(existing) {
   }
 }
 
-function createLocalBlogCard(post, href) {
+async function loadBlogViewCounts() {
+  for (const endpoint of BLOG_VIEWS_ENDPOINTS) {
+    try {
+      const response = await fetch(endpoint, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (!response.ok) continue;
+
+      const views = await response.json();
+      if (views && typeof views === "object" && !Array.isArray(views)) {
+        return views;
+      }
+    } catch (error) {
+      continue;
+    }
+  }
+
+  try {
+    const response = await fetch("/blog/views.json");
+    if (!response.ok) throw new Error("Failed to load blog views");
+
+    const views = await response.json();
+    return views && typeof views === "object" && !Array.isArray(views) ? views : {};
+  } catch (error) {
+    return {};
+  }
+}
+
+function createLocalBlogCard(post, href, viewCount = 0) {
   const tags = Array.isArray(post.tags) && post.tags.length ? post.tags.join(" · ") : "Blog post";
 
   return `
     <a class="blog-card" href="${escapeAttribute(href)}">
       <img src="${escapeAttribute(post.cover || "static/blog1.png")}" alt="${escapeAttribute(post.title)}" loading="lazy" />
       <div class="blog-content">
-        <p class="blog-card-meta">${formatDate(post.date)} · ${post.readingTime || 1} min read</p>
+        <p class="blog-card-meta">${formatDate(post.date)} · ${post.readingTime || 1} min read <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
         <h3>${escapeHtml(post.title)}</h3>
         <p>${escapeHtml(post.description || "Read the full article.")}</p>
         <div class="blog-card-footer">
@@ -343,11 +386,12 @@ function createLocalBlogCard(post, href) {
 }
 
 function createDevBlogCard(article, href) {
+  const viewCount = Number(article.page_views_count || 0);
   return `
     <a class="blog-card blog-card-external" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">
       <img src="${escapeAttribute(article.cover_image || "static/blog1.png")}" alt="${escapeAttribute(article.title)}" loading="lazy" />
       <div class="blog-content">
-        <p class="blog-card-meta">${escapeHtml(formatBlogDate(article))} · Dev.to</p>
+        <p class="blog-card-meta">${escapeHtml(formatBlogDate(article))} · Dev.to <span class="blog-view-count">${formatViewCount(viewCount)}</span></p>
         <h3>${escapeHtml(article.title)}</h3>
         <p>${escapeHtml(article.description || "Read the full article.")}</p>
         <div class="blog-card-footer">
@@ -381,6 +425,12 @@ function formatBlogDate(article) {
   const source = article.published_at || article.readable_publish_date || "";
   const formatted = formatDate(source);
   return formatted || article.readable_publish_date || "";
+}
+
+function formatViewCount(value) {
+  const count = Number(value || 0);
+  const formatter = new Intl.NumberFormat("en-US", { notation: count >= 10000 ? "compact" : "standard" });
+  return `${formatter.format(count)} view${count === 1 ? "" : "s"}`;
 }
 
 function escapeHtml(value) {
