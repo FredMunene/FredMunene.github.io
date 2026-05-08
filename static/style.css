@@ -916,6 +916,16 @@ button {
   color: #b8f5ef;
 }
 
+.post-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-content a:hover {
+  color: var(--accent-2);
+}
+
 .blog-post-footer {
   display: flex;
   flex-wrap: wrap;
