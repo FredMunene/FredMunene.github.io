@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fretammy Technologies | Technology & Software Development</title>
+    <meta
+      name="description"
+      content="Fretammy Technologies builds reliable backend systems, blockchain infrastructure, web and mobile applications, and scalable cloud solutions for businesses."
+    />
+    <meta name="author" content="Fretammy Technologies" />
+    <meta
+      name="keywords"
+      content="software development, backend engineering, blockchain, web development, mobile apps, cloud infrastructure, Kenya, Nairobi, technology consulting"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#07111f" />
+    <link rel="canonical" href="https://gitongacodes.co.ke/fretammy_technologies/" />
+    <link rel="icon" href="../static/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fretammy Technologies",
+        "url": "https://gitongacodes.co.ke/fretammy_technologies/",
+        "description": "Technology and software development services — backend systems, blockchain, web, mobile, and cloud infrastructure.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "munene2050gitonga@gmail.com",
+          "contactType": "customer support"
+        }
+      }
+    </script>
+    <meta property="og:site_name" content="Fretammy Technologies" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Fretammy Technologies | Technology & Software Development" />
+    <meta property="og:description" content="Reliable backend systems, blockchain infrastructure, and full-stack development for businesses that need it done right." />
+    <meta property="og:url" content="https://gitongacodes.co.ke/fretammy_technologies/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fretammy Technologies | Technology & Software Development" />
+    <meta name="twitter:description" content="Reliable backend systems, blockchain infrastructure, and full-stack development for businesses that need it done right." />
+    <style>
+      /* Fretammy Technologies page overrides */
+      .ft-brand-mark {
+        background: linear-gradient(145deg, #d4af37, #f5d97a) !important;
+      }
+
+      .ft-hero-eyebrow {
+        color: var(--accent-2);
+      }
+
+      .ft-accent {
+        color: var(--accent-2);
+      }
+
+      .ft-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        background: rgba(212, 175, 55, 0.08);
+        color: #f5d97a;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .ft-badge::before {
+        content: "";
+        width: 0.45rem;
+        height: 0.45rem;
+        border-radius: 50%;
+        background: #d4af37;
+        animation: pulse-dot 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.8); }
+      }
+
+      .service-card-ft {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .service-card-ft::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .service-card-ft:hover::before {
+        opacity: 1;
+      }
+
+      .service-icon {
+        width: 2.6rem;
+        height: 2.6rem;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        background: rgba(60, 198, 191, 0.12);
+        border: 1px solid rgba(60, 198, 191, 0.2);
+        color: var(--accent);
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .process-step {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+        position: relative;
+      }
+
+      .process-number {
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        line-height: 1;
+        color: rgba(60, 198, 191, 0.18);
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+
+      .process-step h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+        color: var(--text);
+      }
+
+      .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .stack-group {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+      }
+
+      .stack-group h3 {
+        margin: 0 0 1rem;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .stack-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .stack-tag {
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.82rem;
+        color: var(--muted);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+
+      .why-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1.4rem;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+
+      .why-icon {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        color: var(--accent-2);
+        font-size: 1.15rem;
+        flex: none;
+      }
+
+      .why-copy h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1rem;
+        color: var(--text);
+      }
+
+      .why-copy p {
+        font-size: 0.92rem;
+      }
+
+      .work-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.25rem;
+      }
+
+      .case-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .case-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .case-tag {
+        padding: 0.25rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid rgba(60, 198, 191, 0.25);
+        background: rgba(60, 198, 191, 0.08);
+        font-size: 0.72rem;
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .case-card h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        color: var(--text);
+      }
+
+      .case-outcomes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .outcome-pill {
+        padding: 0.28rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .cta-band {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: calc(var(--radius) + 4px);
+        padding: clamp(2rem, 5vw, 3.5rem);
+        text-align: center;
+        display: grid;
+        gap: 1.2rem;
+        justify-items: center;
+      }
+
+      .cta-band h2 {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        max-width: 22ch;
+      }
+
+      .cta-band p {
+        max-width: 52ch;
+      }
+
+      .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .stat-box {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .stat-box strong {
+        display: block;
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 0.4rem;
+      }
+
+      .stat-box span {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .ft-footer-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .ft-footer-links {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .ft-footer-links a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        transition: color 0.25s ease;
+      }
+
+      .ft-footer-links a:hover {
+        color: var(--text);
+      }
+
+      @media (max-width: 860px) {
+        .process-grid,
+        .stack-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .work-card {
+          grid-template-columns: 1fr;
+        }
+
+        .stat-row {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .process-grid,
+        .stack-grid,
+        .stat-row {
+          grid-template-columns: 1fr;
+        }
+
+        .ft-footer-links {
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body id="top">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fretammy Technologies home">
+        <span class="brand-mark ft-brand-mark">FT</span>
+        <span class="brand-text">
+          <strong>Fretammy Technologies</strong>
+          <small>Technology & Software Development</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" data-nav>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#work">Work</a>
+        <a href="#stack">Stack</a>
+        <a href="#contact">Contact</a>
+        <a href="/">Fred's Portfolio</a>
+      </nav>
+
+      <a class="button button-primary header-cta" href="#contact">Get in touch</a>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          
+          <p class="eyebrow ft-hero-eyebrow">Technology & Software Development</p>
+          <h1>Software built to last, systems built to scale.</h1>
+          <p class="lead">
+            Fretammy Technologies delivers backend infrastructure, blockchain solutions, web and mobile
+            applications, and cloud architecture for businesses that need reliable technology done right.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Start a project</a>
+            <a class="button button-ghost" href="#services">Our services</a>
+          </div>
+          <div class="signal-grid">
+            <article>
+              <span>Approach</span>
+              <strong>Systems first, delivery second, maintenance always</strong>
+            </article>
+            <article>
+              <span>Expertise</span>
+              <strong>Backend, blockchain, web, mobile, and cloud</strong>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal">
+          <div class="hero-card">
+            <p class="card-label">What we build</p>
+            <ul>
+              <li><span>Backend Systems</span><strong>APIs, microservices, data pipelines</strong></li>
+              <li><span>Blockchain</span><strong>Smart contracts, DeFi, Web3 infra</strong></li>
+              <li><span>Web & Mobile</span><strong>Full-stack apps, dashboards, PWAs</strong></li>
+              <li><span>Cloud & DevOps</span><strong>Infrastructure, CI/CD, reliability</strong></li>
+            </ul>
+          </div>
+          <div class="stat-row">
+            <div class="stat-box">
+              <strong>10+</strong>
+              <span>Projects delivered</span>
+            </div>
+            <div class="stat-box">
+              <strong>5+</strong>
+              <span>Industries served</span>
+            </div>
+            <div class="stat-box">
+              <strong>3+</strong>
+              <span>Countries reached</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Trust strip -->
+      <section class="section trust">
+        <div class="trust-strip reveal">
+          <div>
+            <span>Focus</span>
+            <strong>Correct, maintainable, and deliverable software</strong>
+          </div>
+          <div>
+            <span>Stack</span>
+            <strong>Go, TypeScript, Solidity, React, Node.js, Kubernetes</strong>
+          </div>
+          <div>
+            <span>Delivery</span>
+            <strong>Agile sprints, clear milestones, no surprises</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services" id="services">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Services</p>
+          <h2>Everything you need to ship and scale.</h2>
+          <p class="lead">From first architecture decision to production deployment and ongoing maintenance.</p>
+        </div>
+        <div class="card-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-server"></i></div>
+            <span class="service-index">01</span>
+            <h3>Backend Development</h3>
+            <p>Scalable APIs, microservices, database design, third-party integrations, and long-term maintainability.</p>
+          </article>
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-link"></i></div>
+            <span class="service-index">02</span>
+            <h3>Blockchain & Web3</h3>
+            <p>Smart contract development, DeFi protocols, NFT infrastructure, wallet integrations, and security audits.</p>
+          </article>
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-globe"></i></div>
+            <span class="service-index">03</span>
+            <h3>Web Development</h3>
+            <p>Modern web applications, dashboards, landing pages, and progressive web apps built for performance.</p>
+          </article>
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <span class="service-index">04</span>
+            <h3>Mobile Applications</h3>
+            <p>Cross-platform iOS and Android apps with native feel, offline support, and smooth user experiences.</p>
+          </article>
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-cloud"></i></div>
+            <span class="service-index">05</span>
+            <h3>Cloud & DevOps</h3>
+            <p>Infrastructure design, containerisation, CI/CD pipelines, monitoring, and reliability engineering.</p>
+          </article>
+          <article class="service-card service-card-ft reveal">
+            <div class="service-icon"><i class="fas fa-chess-knight"></i></div>
+            <span class="service-index">06</span>
+            <h3>Technical Consulting</h3>
+            <p>Architecture reviews, CTO advisory, technology roadmaps, and technical due diligence for teams that need clarity.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Why us -->
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Fretammy</p>
+          <h2>Built by engineers, run for outcomes.</h2>
+        </div>
+        <div class="why-grid">
+          <div class="why-item reveal">
+            <div class="why-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="why-copy">
+              <h3>Outcome-first delivery</h3>
+              <p>We measure success by working software and measurable business outcomes, not ticket counts or story points.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="why-copy">
+              <h3>Security by default</h3>
+              <p>Security is not a feature we add later. Every system we design starts with threat modelling and safe defaults.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-icon"><i class="fas fa-comments"></i></div>
+            <div class="why-copy">
+              <h3>Clear communication</h3>
+              <p>Weekly updates, documented decisions, and honest timelines — no surprises, no ghost runs.</p>
+            </div>
+          </div>
+          <div class="why-item reveal">
+            <div class="why-icon"><i class="fas fa-infinity"></i></div>
+            <div class="why-copy">
+              <h3>Long-term maintainability</h3>
+              <p>Code we ship is code you can own. Clean architecture, good tests, and handover documentation included.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section" id="process">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Process</p>
+          <h2>How we take a project from idea to production.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-number">01</div>
+            <h3>Discovery</h3>
+            <p>We map your requirements, constraints, and success criteria before writing a single line of code.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">02</div>
+            <h3>Architecture</h3>
+            <p>We design the system: data models, service boundaries, tech choices, and an agreed delivery roadmap.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">03</div>
+            <h3>Build & Review</h3>
+            <p>Iterative sprints with regular demos, code reviews, and continuous deployment to a staging environment.</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="process-number">04</div>
+            <h3>Ship & Support</h3>
+            <p>Production deployment with monitoring, documentation, and post-launch support included.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work / Case Studies -->
+      <section class="section" id="work">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects we are proud of.</h2>
+        </div>
+        <div class="work-card">
+          <div class="case-card reveal">
+            <div class="case-card-header">
+              <span class="case-tag">Blockchain / DeFi</span>
+            </div>
+            <h3>Imara Protocol</h3>
+            <p>Co-built a cross-border developer collaboration platform on Web3 rails — including smart contract payment flows, on-chain identity, and a Go-powered backend API.</p>
+            <div class="case-outcomes">
+              <span class="outcome-pill">Go backend</span>
+              <span class="outcome-pill">Solidity contracts</span>
+              <span class="outcome-pill">React frontend</span>
+              <span class="outcome-pill">AWS infrastructure</span>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <div class="case-card-header">
+              <span class="case-tag">Platform / SaaS</span>
+            </div>
+            <h3>Topizzy</h3>
+            <p>Designed and led the backend architecture for a consumer platform — service layer, payment integrations, notification systems, and developer tooling for the team.</p>
+            <div class="case-outcomes">
+              <span class="outcome-pill">Microservices</span>
+              <span class="outcome-pill">Go + Node.js</span>
+              <span class="outcome-pill">PostgreSQL</span>
+              <span class="outcome-pill">Kubernetes</span>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <div class="case-card-header">
+              <span class="case-tag">Infrastructure</span>
+            </div>
+            <h3>Digitalyze Labs</h3>
+            <p>Engineered transaction flow services, backend infrastructure, and system robustness improvements for a fintech-adjacent startup.</p>
+            <div class="case-outcomes">
+              <span class="outcome-pill">Transaction systems</span>
+              <span class="outcome-pill">API integrations</span>
+              <span class="outcome-pill">Observability</span>
+              <span class="outcome-pill">CI/CD pipelines</span>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <div class="case-card-header">
+              <span class="case-tag">Open Source</span>
+            </div>
+            <h3>Developer Tooling & Open Source</h3>
+            <p>A growing set of open-source tools, libraries, and contributions that we use internally and share publicly — from CLI utilities to protocol helpers.</p>
+            <div class="case-outcomes">
+              <span class="outcome-pill">Go libraries</span>
+              <span class="outcome-pill">Solidity utilities</span>
+              <span class="outcome-pill">TypeScript SDKs</span>
+              <span class="outcome-pill">GitHub public</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tech Stack -->
+      <section class="section" id="stack">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technology Stack</p>
+          <h2>The tools we know well.</h2>
+          <p class="lead">Chosen for correctness, longevity, and the ability to hire for them.</p>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-group reveal">
+            <h3>Backend</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">Go</span>
+              <span class="stack-tag">Node.js</span>
+              <span class="stack-tag">TypeScript</span>
+              <span class="stack-tag">Python</span>
+              <span class="stack-tag">REST</span>
+              <span class="stack-tag">GraphQL</span>
+              <span class="stack-tag">gRPC</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h3>Blockchain</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">Solidity</span>
+              <span class="stack-tag">Ethereum</span>
+              <span class="stack-tag">Hardhat</span>
+              <span class="stack-tag">ethers.js</span>
+              <span class="stack-tag">IPFS</span>
+              <span class="stack-tag">Chainlink</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h3>Frontend</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">React</span>
+              <span class="stack-tag">Next.js</span>
+              <span class="stack-tag">Vue</span>
+              <span class="stack-tag">Svelte</span>
+              <span class="stack-tag">Tailwind CSS</span>
+              <span class="stack-tag">React Native</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h3>Data</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">PostgreSQL</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">Redis</span>
+              <span class="stack-tag">MongoDB</span>
+              <span class="stack-tag">Elasticsearch</span>
+              <span class="stack-tag">Kafka</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h3>Cloud & DevOps</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">AWS</span>
+              <span class="stack-tag">GCP</span>
+              <span class="stack-tag">Docker</span>
+              <span class="stack-tag">Kubernetes</span>
+              <span class="stack-tag">Terraform</span>
+              <span class="stack-tag">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="stack-group reveal">
+            <h3>Observability</h3>
+            <div class="stack-tags">
+              <span class="stack-tag">Prometheus</span>
+              <span class="stack-tag">Grafana</span>
+              <span class="stack-tag">OpenTelemetry</span>
+              <span class="stack-tag">Sentry</span>
+              <span class="stack-tag">Datadog</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA band -->
+      <section class="section" id="contact">
+        <div class="cta-band reveal">
+          <p class="eyebrow ft-accent">Start a project</p>
+          <h2>Have a system to build or a codebase to fix?</h2>
+          <p>Whether you need a greenfield backend, a smart contract audit, or a team to accelerate delivery — let's talk about what the work actually is.</p>
+          <div class="cta-actions">
+            <a class="button button-primary" href="mailto:munene2050gitonga@gmail.com?subject=Fretammy%20Technologies%20%E2%80%94%20Project%20Inquiry">Email us directly</a>
+            <a class="button button-ghost" href="https://www.linkedin.com/in/fredgitonga/" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          </div>
+          <div class="contact-links" style="margin-top: 0.5rem; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+            <a href="mailto:munene2050gitonga@gmail.com" style="color: var(--accent); font-size: 0.9rem;">munene2050gitonga@gmail.com</a>
+            <a href="https://github.com/FredMunene" target="_blank" rel="noreferrer" style="color: var(--muted); font-size: 0.9rem;">GitHub &nearr;</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div class="ft-footer-brand">
+        <span class="brand-mark ft-brand-mark" style="width: 2.2rem; height: 2.2rem; font-size: 0.75rem; border-radius: 10px;">FT</span>
+        <span style="font-size: 0.9rem; color: var(--muted);">Fretammy Technologies &copy; 2025</span>
+      </div>
+      <div class="ft-footer-links">
+        <a href="#top">Back to top</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="/">Fred's Portfolio</a>
+      </div>
+    </footer>
+
+    <script>
+      // Intersection observer for .reveal animations (same pattern as main site)
+      (function () {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("in-view");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+        // Mobile nav toggle
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const nav = document.querySelector("[data-nav]");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const open = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!open));
+            nav.classList.toggle("open", !open);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
