@@ -1,17 +1,6 @@
 {
-  "lastUpdated": "2026-06-29T02:46:37.717Z",
+  "lastUpdated": "2026-07-06T02:30:30.978Z",
   "repos": [
-    {
-      "name": "FredMunene.github.io",
-      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
-      "homepage": "https://gitongacodes.co.ke",
-      "topics": [
-        "portfolio-site",
-        "project"
-      ],
-      "description": "Personal Portfolio Website                     https://gitongacodes.co.ke                            ",
-      "updated_at": "2026-06-22T03:28:27Z"
-    },
     {
       "name": "topizzy",
       "html_url": "https://github.com/FredMunene/topizzy",
@@ -21,7 +10,18 @@
         "project"
       ],
       "description": "Topizzy is a web3 fintech tool built for USDC holders who want to use their crypto in everyday life. Instead of converting to fiat and then spending, Topizzy lets you top-up mobile airtime using USDC directly, Topizzy opens a bridge between digital assets and real‐world utility.",
-      "updated_at": "2026-05-20T18:55:48Z"
+      "updated_at": "2026-06-30T16:50:47Z"
+    },
+    {
+      "name": "FredMunene.github.io",
+      "html_url": "https://github.com/FredMunene/FredMunene.github.io",
+      "homepage": "https://gitongacodes.co.ke",
+      "topics": [
+        "portfolio-site",
+        "project"
+      ],
+      "description": "Personal Portfolio Website                     https://gitongacodes.co.ke                            ",
+      "updated_at": "2026-06-29T02:46:41Z"
     },
     {
       "name": "polkaShield",
@@ -54,7 +54,7 @@
         "project"
       ],
       "description": "Teesti website.",
-      "updated_at": "2026-06-29T02:46:37.717Z"
+      "updated_at": "2026-07-06T02:30:30.978Z"
     }
   ]
 }
