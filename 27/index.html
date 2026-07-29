@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Video</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" href="data:," />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: #0d0d0d;
+        color: #eee;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background: #212121;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 3px solid #f90;
+      }
+      .logo {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+      .logo span { color: #f90; }
+      .search {
+        flex: 1;
+        max-width: 600px;
+        display: flex;
+      }
+      .search input {
+        flex: 1;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 3px 0 0 3px;
+        background: #333;
+        color: #eee;
+      }
+      .search button {
+        background: #f90;
+        border: none;
+        padding: 0 16px;
+        border-radius: 0 3px 3px 0;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .nav {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1.title {
+        font-size: 20px;
+        margin: 0 0 4px;
+      }
+      .meta {
+        color: #999;
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+      .player {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .player video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .player video.ready { opacity: 1; }
+      .loading {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: #000;
+        transition: opacity 0.3s ease;
+      }
+      .loading.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .spinner {
+        width: 56px;
+        height: 56px;
+        border: 5px solid #333;
+        border-top-color: #f90;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .loading p {
+        color: #aaa;
+        font-size: 13px;
+        margin: 0;
+      }
+      .thumbrow {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+      .thumb {
+        background: #1a1a1a;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .thumb .pic {
+        width: 100%;
+        aspect-ratio: 16/9;
+        background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #555;
+        font-size: 12px;
+        position: relative;
+      }
+      .thumb .dur {
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        background: rgba(0,0,0,0.8);
+        font-size: 11px;
+        padding: 1px 4px;
+        border-radius: 2px;
+      }
+      .thumb .cap {
+        padding: 8px;
+        font-size: 13px;
+        color: #ccc;
+      }
+      .thumb .stat {
+        padding: 0 8px 8px;
+        font-size: 11px;
+        color: #888;
+      }
+      footer {
+        text-align: center;
+        color: #555;
+        font-size: 12px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Tube<span>Hub</span></div>
+      <div class="search">
+        <input type="text" placeholder="Search videos..." />
+        <button>Search</button>
+      </div>
+    </header>
+
+    <div class="nav">
+      <h1 class="title">Amateur couple - home video (HD)</h1>
+      <div class="meta"><span id="main-views"></span> views &nbsp;·&nbsp; 98% &nbsp;·&nbsp; 3 days ago</div>
+
+      <div class="player">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <p id="loading-text">Loading video...</p>
+        </div>
+        <video id="vid" playsinline preload="auto">
+          <source src="clip.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div class="thumbrow">
+        <div class="thumb"><div class="pic">preview<span class="dur">12:04</span></div><div class="cap">Never gonna let you down</div><div class="stat">views</div></div>
+        <div class="thumb"><div class="pic">preview<span class="dur">8:41</span></div><div class="cap">Never gonna run around</div><div class="stat">views</div></div>
+        <div class="thumb"><div class="pic">preview<span class="dur">15:20</span></div><div class="cap">We've known each other for so long</div><div class="stat">views</div></div>
+        <div class="thumb"><div class="pic">preview<span class="dur">6:12</span></div><div class="cap">Your heart's been aching but you're too shy</div><div class="stat">views</div></div>
+        <div class="thumb"><div class="pic">preview<span class="dur">22:03</span></div><div class="cap">Inside we both know what's been going on</div><div class="stat">views</div></div>
+        <div class="thumb"><div class="pic">preview<span class="dur">4:55</span></div><div class="cap">You know the rules and so do I</div><div class="stat">views</div></div>
+      </div>
+    </div>
+
+    <footer>18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</footer>
+
+    <script>
+      const vid = document.getElementById('vid');
+      const loading = document.getElementById('loading');
+      const loadingText = document.getElementById('loading-text');
+
+      const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById('main-views').textContent = rand(2, 100);
+      document.querySelectorAll('.thumb .stat').forEach((el) => {
+        el.textContent = `${rand(2, 100)} views`;
+      });
+
+      const messages = ['Loading video...', 'Buffering...', 'Almost there...', 'Just a moment...'];
+      let i = 0;
+      const msgTimer = setInterval(() => {
+        i = (i + 1) % messages.length;
+        loadingText.textContent = messages[i];
+      }, 1400);
+
+      function reveal() {
+        clearInterval(msgTimer);
+        loading.classList.add('hidden');
+        vid.classList.add('ready');
+        vid.muted = false;
+        vid.play().catch(() => {});
+      }
+
+      const minDelay = new Promise((resolve) => setTimeout(resolve, 2500));
+      const canPlay = new Promise((resolve) => {
+        if (vid.readyState >= 3) return resolve();
+        vid.addEventListener('canplaythrough', resolve, { once: true });
+      });
+
+      Promise.all([minDelay, canPlay]).then(reveal);
+
+      vid.addEventListener('ended', () => {
+        vid.currentTime = 0;
+        vid.play().catch(() => {});
+      });
+    </script>
+  </body>
+</html>
