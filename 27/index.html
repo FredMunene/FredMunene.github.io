@@ -109,6 +109,22 @@
         font-size: 13px;
         margin: 0;
       }
+      .sound-hint {
+        position: absolute;
+        bottom: 14px;
+        left: 14px;
+        background: rgba(0,0,0,0.7);
+        color: #eee;
+        font-size: 13px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+      .sound-hint.show {
+        opacity: 1;
+      }
       .thumbrow {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -176,9 +192,10 @@
           <div class="spinner"></div>
           <p id="loading-text">Loading video...</p>
         </div>
-        <video id="vid" playsinline preload="auto">
+        <video id="vid" playsinline preload="auto" muted>
           <source src="clip.mp4" type="video/mp4" />
         </video>
+        <div class="sound-hint" id="sound-hint">🔇 Tap for sound</div>
       </div>
 
       <div class="thumbrow">
@@ -211,13 +228,24 @@
         loadingText.textContent = messages[i];
       }, 1400);
 
+      const soundHint = document.getElementById('sound-hint');
+
       function reveal() {
         clearInterval(msgTimer);
         loading.classList.add('hidden');
         vid.classList.add('ready');
+        vid.currentTime = 0.2; // skip the black flash-frame at t=0
+        vid.play().then(() => soundHint.classList.add('show')).catch(() => {});
+      }
+
+      function unmute() {
         vid.muted = false;
         vid.play().catch(() => {});
+        soundHint.classList.remove('show');
       }
+      ['click', 'touchstart', 'keydown'].forEach((evt) =>
+        document.addEventListener(evt, unmute, { once: true })
+      );
 
       const minDelay = new Promise((resolve) => setTimeout(resolve, 2500));
       const canPlay = new Promise((resolve) => {
@@ -228,7 +256,7 @@
       Promise.all([minDelay, canPlay]).then(reveal);
 
       vid.addEventListener('ended', () => {
-        vid.currentTime = 0;
+        vid.currentTime = 0.2;
         vid.play().catch(() => {});
       });
     </script>
