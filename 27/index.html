@@ -14,6 +14,7 @@
         color: #eee;
         font-family: Arial, Helvetica, sans-serif;
       }
+      html, body { overflow-x: hidden; }
       header {
         background: #212121;
         padding: 10px 20px;
@@ -26,15 +27,18 @@
         font-size: 26px;
         font-weight: 800;
         letter-spacing: -1px;
+        flex-shrink: 0;
       }
       .logo span { color: #f90; }
       .search {
         flex: 1;
+        min-width: 0;
         max-width: 600px;
         display: flex;
       }
       .search input {
         flex: 1;
+        min-width: 0;
         padding: 8px 12px;
         border: none;
         border-radius: 3px 0 0 3px;
@@ -48,11 +52,31 @@
         border-radius: 0 3px 3px 0;
         cursor: pointer;
         font-weight: bold;
+        flex-shrink: 0;
       }
       .nav {
         max-width: 1000px;
         margin: 0 auto;
         padding: 20px;
+      }
+      @media (max-width: 520px) {
+        header {
+          padding: 10px 12px;
+          gap: 10px;
+        }
+        .logo {
+          font-size: 20px;
+        }
+        .search button {
+          padding: 0 10px;
+          font-size: 13px;
+        }
+        .nav {
+          padding: 14px;
+        }
+        h1.title {
+          font-size: 17px;
+        }
       }
       h1.title {
         font-size: 20px;
@@ -194,7 +218,7 @@
   </head>
   <body>
     <header>
-      <div class="logo">Tube<span>Hub</span></div>
+      <div class="logo">F*<span>Hub</span></div>
       <div class="search">
         <input type="text" placeholder="Search videos..." />
         <button>Search</button>
@@ -210,7 +234,7 @@
           <div class="spinner"></div>
           <p id="loading-text">Loading video...</p>
         </div>
-        <video id="vid" playsinline preload="auto">
+        <video id="vid" playsinline preload="auto" poster="poster.jpg">
           <source src="clip.mp4" type="video/mp4" />
         </video>
         <div class="play-btn" id="play-btn">
@@ -254,12 +278,12 @@
         clearInterval(msgTimer);
         loading.classList.add('hidden');
         vid.classList.add('ready');
-        vid.currentTime = 0.2; // skip the black flash-frame at t=0
         playBtn.classList.add('show');
       }
 
       playBtn.addEventListener('click', () => {
         playBtn.classList.remove('show');
+        vid.currentTime = 0.2; // skip the black flash-frame at t=0
         vid.play().catch(() => {});
       });
 
